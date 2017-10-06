@@ -1,0 +1,28 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/lab_2.csproj",
+    "projectName": "lab_2",
+    "projectPath": "/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/lab_2.csproj",
+    "outputPath": "/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp2.0"
+    ],
+    "frameworks": {
+      "netcoreapp2.0": {
+        "projectReferences": {}
+      }
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "target": "Package",
+          "version": "2.0.0"
+        }
+      }
+    }
+  }
+}

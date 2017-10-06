@@ -1,0 +1,10 @@
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/bin/Debug/netcoreapp2.0/lab_2.deps.json
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/bin/Debug/netcoreapp2.0/lab_2.runtimeconfig.json
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/bin/Debug/netcoreapp2.0/lab_2.runtimeconfig.dev.json
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/bin/Debug/netcoreapp2.0/lab_2.dll
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/bin/Debug/netcoreapp2.0/lab_2.pdb
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/obj/Debug/netcoreapp2.0/lab_2.csproj.CoreCompileInputs.cache
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/obj/Debug/netcoreapp2.0/lab_2.AssemblyInfoInputs.cache
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/obj/Debug/netcoreapp2.0/lab_2.AssemblyInfo.cs
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/obj/Debug/netcoreapp2.0/lab_2.dll
+/home/jack/Documents/compilers_CM4106/labs/solutions/lab_2/obj/Debug/netcoreapp2.0/lab_2.pdb
