@@ -707,10 +707,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
+      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
       "projectName": "Triangle.AbstractMachine",
-      "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
-      "outputPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.AbstractMachine/obj/",
+      "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
+      "outputPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"
