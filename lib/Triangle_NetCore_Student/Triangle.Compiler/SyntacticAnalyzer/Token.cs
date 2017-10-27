@@ -20,7 +20,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         public string Spelling { get; private set; }
 
         // Creates a token
-        public Token(TokenKind kind, string spelling)
+        public Token(TokenKind kind, string spelling, SourcePosition pos)
         {
 
             Kind = kind;
@@ -34,6 +34,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             }
 
             Spelling = spelling;
+            position = pos;
         }
 
         public override string ToString()

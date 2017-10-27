@@ -28,6 +28,10 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             }
         }
 
+        public Location location() {
+            return new Location(_lineNumber, _index);
+        }
+
         public string Name { get; private set; }
 
         public bool IsValid { get { return _source != null; } }

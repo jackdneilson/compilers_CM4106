@@ -28,5 +28,12 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             Accept(TokenKind.Identifier);
         }
 
+        void ParseIntLiteral() {
+            Accept(TokenKind.IntLiteral);
+        }
+
+        void ParseOperator() {
+            Accept(TokenKind.Operator);
+        }
     }
 }

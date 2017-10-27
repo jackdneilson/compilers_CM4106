@@ -32,98 +32,57 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         }
 
         /// Parses the single command
-
+        //TODO: Review if should look for identifier or should parse vname
         void ParseSingleCommand()
         {
           System.Console.WriteLine("parsing single command");
             switch (_currentToken.Kind)
-            {
-
-                case TokenKind.Identifier:
-                    {
-                        ParseIdentifier();
-                        //Accept(TokenKind.Becomes);
-                        //ParseExpression();
-                        break;
-
-                    }
-
-                case TokenKind.Begin:
-                    {
-                        AcceptIt();
-                        ParseCommand();
-                        break;
-
-                    }
-
+            {   
                 case TokenKind.If: {
                     AcceptIt();
-                    Accept(TokenKind.LeftParen);
                     ParseExpression();
-                    Accept(TokenKind.RightParen);
                     Accept(TokenKind.Then);
                     ParseSingleCommand();
                     Accept(TokenKind.Else);
                     ParseSingleCommand();
                     break;
                 }
-
+                    
                 case TokenKind.While: {
                     AcceptIt();
-                    Accept(TokenKind.LeftParen);
                     ParseExpression();
-                    Accept(TokenKind.RightParen);
                     Accept(TokenKind.Do);
                     ParseSingleCommand();
                     break;
                 }
-
+                
                 case TokenKind.Let: {
-                    Accept(TokenKind.Identifier);
+                    AcceptIt();
+                    ParseDeclaration();
                     Accept(TokenKind.In);
                     ParseSingleCommand();
                     break;
-                }
-
+                }    
+                    
+                case TokenKind.Begin:
+                    {
+                        AcceptIt();
+                        ParseCommand();
+                        break;
+                    }
 
                 default:
-                    System.Console.WriteLine("error");
+                    ParseVname();
+                    if (_currentToken.Kind == TokenKind.Becomes) {
+                        AcceptIt();
+                        ParseExpression();
+                    } else if (_currentToken.Kind == TokenKind.LeftParen) {
+                        AcceptIt();
+                        ParseExpression();
+                        Accept(TokenKind.RightParen);
+                    }
                     break;
-
             }
-        }
-        
-        /// Parses an expression
-        void ParseExpression() {
-            System.Console.WriteLine("parsing expression");
-            ParsePrimaryExpression();
-            while (_currentToken.Kind == TokenKind.Operator) {
-                AcceptIt();
-                Accept(TokenKind.Operator);
-                ParsePrimaryExpression();
-            }
-        }
-
-        /// Parses the single expression
-        void ParsePrimaryExpression() {
-            System.Console.WriteLine("parsing primary expression");
-            if (_currentToken.Kind == TokenKind.Identifier) {
-                AcceptIt();
-            } else if (_currentToken.Kind == TokenKind.IntLiteral) {
-                AcceptIt();
-                if (_currentToken.Kind == TokenKind.Operator) {
-                    AcceptIt();
-                    ParsePrimaryExpression();
-                }
-            }
-        }
-
-        void ParseDeclaration() {
-            
-        }
-
-        void ParseSingleDeclaration() {
-            
         }
     }
 }

@@ -1,11 +1,19 @@
 ﻿namespace Triangle.Compiler.SyntacticAnalyzer {
     public class Location {
-        public int lineNumber { get; }
-        public int lineIndex { get; }
+        public static readonly Location Empty = new Location(0, 0);
 
-        public Location(int lineNumber, int lineIndex) {
-            this.lineNumber = lineNumber;
-            this.lineIndex = lineIndex;
+        public readonly int Line;
+        public readonly int Column;
+
+        public Location(int line, int column)
+        {
+            Line = line;
+            Column = column;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("({0},{1})", Line, Column);
         }
     }
 }
