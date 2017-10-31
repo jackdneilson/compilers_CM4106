@@ -22,7 +22,10 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         /// Parses the command error
         void ParseCommand()
         {
-          System.Console.WriteLine("parsing command");
+          System.Console.WriteLine("Parsing command line: " 
+                                   + _currentToken.getLine()
+                                   + " index: "
+                                   + _currentToken.getIndex());
             ParseSingleCommand();
             while (_currentToken.Kind == TokenKind.Semicolon)
             {
@@ -35,7 +38,10 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         //TODO: Review if should look for identifier or should parse vname
         void ParseSingleCommand()
         {
-          System.Console.WriteLine("parsing single command");
+          System.Console.WriteLine("Parsing single command line: " 
+                                   + _currentToken.getLine()
+                                   + " index: "
+                                   + _currentToken.getIndex());
             switch (_currentToken.Kind)
             {   
                 case TokenKind.If: {

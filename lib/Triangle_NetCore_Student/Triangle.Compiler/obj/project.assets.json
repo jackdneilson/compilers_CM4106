@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Microsoft.NETCore.App/2.0.0": {
@@ -719,7 +719,8 @@
     ]
   },
   "packageFolders": {
-    "/home/jack/.nuget/packages/": {}
+    "/home/jack/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -727,11 +728,21 @@
       "projectUniqueName": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/Triangle.Compiler.csproj",
       "projectName": "Triangle.Compiler",
       "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/Triangle.Compiler.csproj",
+      "packagesPath": "/home/jack/.nuget/packages/",
       "outputPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/home/jack/.nuget/NuGet/NuGet.Config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
@@ -740,6 +751,11 @@
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -747,9 +763,15 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "2.0.0",
+            "autoReferenced": true
           }
-        }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
       }
     }
   }

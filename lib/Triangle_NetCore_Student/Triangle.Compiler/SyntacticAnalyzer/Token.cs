@@ -37,6 +37,14 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             position = pos;
         }
 
+        public int getLine() {
+            return position.Start.Line;
+        }
+
+        public int getIndex() {
+            return position.Start.Column;
+        }
+
         public override string ToString()
         {
             return string.Format("Kind={0}, spelling=\"{1}\"", Kind, Spelling);

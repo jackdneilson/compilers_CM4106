@@ -1,6 +1,10 @@
 ﻿namespace Triangle.Compiler.SyntacticAnalyzer {
     public partial class Parser {
         void ParseExpression() {
+            System.Console.WriteLine("Parsing expression line: " 
+                                     + _currentToken.getLine()
+                                     + " index: "
+                                     + _currentToken.getIndex());
             switch (_currentToken.Kind) {
                 case TokenKind.Let: {
                     AcceptIt();
@@ -28,22 +32,30 @@
         }
 
         void ParseSecondaryExpression() {
+            System.Console.WriteLine("Parsing secondary expression line: " 
+                                     + _currentToken.getLine()
+                                     + " index: "
+                                     + _currentToken.getIndex());
             ParsePrimaryExpression();
             if (_currentToken.Kind == TokenKind.Operator) {
-                AcceptIt();
+                ParseOperator();
                 ParsePrimaryExpression();
             }
         }
 
         void ParsePrimaryExpression() {
+            System.Console.WriteLine("Parsing primary expression line: " 
+                                     + _currentToken.getLine()
+                                     + " index: "
+                                     + _currentToken.getIndex());
             switch (_currentToken.Kind) {
                 case TokenKind.IntLiteral: {
-                    AcceptIt();
+                    ParseIntLiteral();
                     break; 
                 }
                     
                 case TokenKind.CharLiteral: {
-                    AcceptIt();
+                    ParseCharLiteral();
                     break;
                 }
 
@@ -58,7 +70,7 @@
                 }
 
                 case TokenKind.Operator: {
-                    AcceptIt();
+                    ParseOperator();
                     ParsePrimaryExpression();
                     break;
                 }
@@ -68,6 +80,16 @@
                     ParseExpression();
                     Accept(TokenKind.RightParen);
                     break;
+                }
+
+                default: {
+                    _reporter.ReportError("Error while parsing expresion line: "
+                                          + _currentToken.getLine()
+                                          + " index: "
+                                          + _currentToken.getIndex()
+                                          + " expected literal, identifier"
+                                          + " operator, left paren, got ",
+                        _currentToken);
                 }
             }
         }

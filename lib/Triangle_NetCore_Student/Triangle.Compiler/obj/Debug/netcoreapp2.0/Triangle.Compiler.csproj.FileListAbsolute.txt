@@ -37,3 +37,16 @@
 /home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.AssemblyInfo.cs
 /home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.dll
 /home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.pdb
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.Compiler.deps.json
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.Compiler.runtimeconfig.json
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.Compiler.runtimeconfig.dev.json
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.Compiler.dll
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.Compiler.pdb
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.dll
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.pdb
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.csprojResolveAssemblyReference.cache
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.csproj.CoreCompileInputs.cache
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.AssemblyInfoInputs.cache
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.AssemblyInfo.cs
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.dll
+/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.Compiler/obj/Debug/netcoreapp2.0/Triangle.Compiler.pdb

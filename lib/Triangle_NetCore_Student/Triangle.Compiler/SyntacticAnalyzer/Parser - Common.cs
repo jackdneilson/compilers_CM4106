@@ -18,12 +18,14 @@ namespace Triangle.Compiler.SyntacticAnalyzer
 
         Token _currentToken;
 
+        ErrorReporter _reporter;
+
         IEnumerator<Token> _tokens;
 
-        public Parser(Scanner scanner)
+        public Parser(Scanner scanner, ErrorReporter reporter)
         {
             _scanner = scanner;
-            //_errorReporter = errorReporter;
+            _reporter = reporter;
             //_previousLocation = Location.Empty;
             _tokens = _scanner.GetEnumerator();
         }
@@ -33,12 +35,18 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         /// fetches the next token from the source file, if not it throws a
         void Accept(TokenKind expectedKind)
         {
-            if (_currentToken.Kind == expectedKind)
-            {
+            if (_currentToken.Kind == expectedKind) {
                 Token token = _currentToken;
                 //_previousLocation = token.Start;
                 _tokens.MoveNext();
                 _currentToken = _tokens.Current;
+            }
+            else {
+                _reporter.ReportError("Error line: " + _currentToken.getLine()
+                                      + " index: " + _currentToken.getIndex()
+                                      + ", got " + _currentToken.Kind
+                                      + " expected " + expectedKind, 
+                    _currentToken);
             }
         }
 
