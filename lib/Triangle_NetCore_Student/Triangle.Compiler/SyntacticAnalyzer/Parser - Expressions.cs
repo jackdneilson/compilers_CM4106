@@ -81,7 +81,7 @@
                     Accept(TokenKind.RightParen);
                     break;
                 }
-
+                    
                 default: {
                     _reporter.ReportError("Error while parsing expresion line: "
                                           + _currentToken.getLine()
@@ -90,6 +90,7 @@
                                           + " expected literal, identifier"
                                           + " operator, left paren, got ",
                         _currentToken);
+                    break;
                 }
             }
         }

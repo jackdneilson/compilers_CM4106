@@ -165,9 +165,11 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                     return TokenKind.CharLiteral;
                     
                 case '>':
+                    TakeIt();
                     return TokenKind.Operator;
                     
                 case '<':
+                    TakeIt();
                     return TokenKind.Operator;
                     
                 case '/':

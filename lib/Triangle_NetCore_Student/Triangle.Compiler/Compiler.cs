@@ -17,12 +17,14 @@ namespace Triangle.Compiler
 
         Parser _parser;
 
+        private ErrorReporter _reporter = new ErrorReporter();
+
         // Creates a compiler for the given source file.
         Compiler(string sourceFileName)
         {
             _source = new SourceFile(sourceFileName);
             _scanner = new Scanner(_source);
-            _parser = new Parser(_scanner);
+            _parser = new Parser(_scanner, _reporter);
         }
 
 
