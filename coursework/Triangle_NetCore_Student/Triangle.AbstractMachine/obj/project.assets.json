@@ -200,20 +200,8 @@
       "NuGet.Build.Packaging/0.1.276": {
         "type": "package",
         "build": {
-          "build/_._": {}
-        }
-      },
-      "Triangle.AbstractMachine/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "NuGet.Build.Packaging": "0.1.276"
-        },
-        "compile": {
-          "bin/placeholder/Triangle.AbstractMachine.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Triangle.AbstractMachine.dll": {}
+          "build/NuGet.Build.Packaging.props": {},
+          "build/NuGet.Build.Packaging.targets": {}
         }
       }
     }
@@ -705,17 +693,12 @@
         "nuget.build.packaging.0.1.276.nupkg.sha512",
         "nuget.build.packaging.nuspec"
       ]
-    },
-    "Triangle.AbstractMachine/1.0.0": {
-      "type": "project",
-      "path": "../Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
-      "msbuildProject": "../Triangle.AbstractMachine/Triangle.AbstractMachine.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
-      "Triangle.AbstractMachine >= 1.0.0"
+      "NuGet.Build.Packaging >= 0.1.276"
     ]
   },
   "packageFolders": {
@@ -724,21 +707,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/Triangle.AbstractMachine.Interpreter.csproj",
-      "projectName": "Triangle.AbstractMachine.Interpreter",
-      "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/Triangle.AbstractMachine.Interpreter.csproj",
-      "outputPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/obj/",
+      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
+      "projectName": "Triangle.AbstractMachine",
+      "projectPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
+      "outputPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {
-            "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj": {
-              "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       }
     },
@@ -746,8 +725,13 @@
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "2.0.0"
+          },
+          "NuGet.Build.Packaging": {
+            "target": "Package",
+            "version": "0.1.276"
           }
         }
       }

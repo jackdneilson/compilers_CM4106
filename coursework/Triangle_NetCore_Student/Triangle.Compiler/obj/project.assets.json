@@ -724,10 +724,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine.Disassembler/Triangle.AbstractMachine.Disassembler.csproj",
-      "projectName": "Triangle.AbstractMachine.Disassembler",
-      "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine.Disassembler/Triangle.AbstractMachine.Disassembler.csproj",
-      "outputPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine.Disassembler/obj/",
+      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.Compiler/Triangle.Compiler.csproj",
+      "projectName": "Triangle.Compiler",
+      "projectPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.Compiler/Triangle.Compiler.csproj",
+      "outputPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.Compiler/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -735,8 +735,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj": {
-              "projectPath": "/home/jack/Documents/compilers_CM4106/lib/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj"
+            "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj": {
+              "projectPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj"
             }
           }
         }

@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[margin=40mm]{geometry}
+\usepackage{listings}
+\begin{document}
+\title{Reduced Triangle Compiler Report}
+\author{Jack Neilson}
+\maketitle
+\newpage
+\section{Introduction}
+The goal of this program is to take a source file written in a reduced form of the triangle langauge and compile it in to a source language. This first submission deals with only the scanner and parser parts of the semantic analyser. The program has been implemented in C\# using .NET Core.
+
+\section{Implementation}
+\subsection{Scanner}
+The scanner reads the source file a single character at a time and groups them in to tokens, ignoring white space and comments, with a single class "Scanner.cs". It returns an enumerable containing all tokens to be iterated over by the parser. A regular expression matching any character in the alphabet is used to generate identifier tokens (see example 1). Any other single-character special tokens (numerals, operators, EOF) have their own, seperate logic in a switch statement to generate the appropriate token (see example 2).
+
+\subsection{Parser}
+
+
+\section{Examples}
+\subsection{Example 1}
+\begin{lstlisting}
+Regex token = new Regex("^[a-zA-Z]+");
+
+if (token.IsMatch(((char) _source.Current).ToString())) {
+	while (token.IsMatch(((char) _source.Current).ToString())) {
+		TakeIt();
+    }
+	return TokenKind.Identifier;
+}
+\end{lstlisting}
+
+\subsection{Example 2}
+\begin{lstlisting}
+case '+':
+	TakeIt();
+	return TokenKind.Operator;
+\end{lstlisting}
+
+\subsection{Example 3}
+\begin{lstlisting}
+\end{lstlisting}
+\end{document}

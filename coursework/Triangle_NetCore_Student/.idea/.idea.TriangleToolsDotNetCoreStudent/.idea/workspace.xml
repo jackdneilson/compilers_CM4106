@@ -11,7 +11,29 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Parser - Commands.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Commands.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <marker date="1509728608255" expanded="true" signature="0:166" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
+                <marker date="1509728608255" expanded="true" signature="215:2759" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="249:2757" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="264:473" ph="/* COMMANDS ... */" />
+                <marker date="1509728608255" expanded="true" signature="533:798" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="694:788" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="869:2751" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="981:2741" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="2466:2568" ph="{...}" />
+                <marker date="1509728608255" expanded="true" signature="2621:2700" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -27,22 +49,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Terminals.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Programs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/ErrorReporter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Token.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Parameters.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourceFile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Declaration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Expressions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourcePosition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Vnames.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/TokenKind.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Common.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Location.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Scanner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Parameters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Commands.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Scanner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Location.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Declaration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Triangle.Compiler/Compiler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Common.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/TokenKind.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Vnames.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourcePosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourceFile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Token.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/ErrorReporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Programs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Terminals.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -91,6 +113,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <PATH>
@@ -104,50 +127,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Triangle.Compiler" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TriangleToolsDotNetCoreStudent (4 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Triangle.Compiler" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="expected" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TriangleToolsDotNetCoreStudent (4 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Triangle.Compiler" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,7 +162,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -245,10 +223,10 @@
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3315508" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2684492" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -274,22 +252,47 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Scanner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1509729337598" expanded="false" signature="6:191" ph="..." />
+            <marker date="1509729337598" expanded="true" signature="238:6941" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="286:6939" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="426:557" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="599:671" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="797:1641" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="832:1631" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="973:1046" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="1432:1514" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="1728:1784" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="1800:1917" ph="/* Appends the current character to the current token, and gets ... */" />
+            <marker date="1509729337598" expanded="true" signature="1940:2052" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="2115:2627" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="2163:2600" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="2251:2308" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="2673:6179" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="2876:3061" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="2953:3002" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="3111:6169" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="3471:3549" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="4090:4197" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="4197:4294" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="5512:5620" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="5620:5717" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="6210:6303" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="6333:6396" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="6429:6933" ph="{...}" />
+            <marker date="1509729337598" expanded="true" signature="6463:6923" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Common.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding>
-            <marker date="1509728694175" expanded="true" signature="0:164" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728694175" expanded="true" signature="248:1862" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="282:1860" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="479:663" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="674:826" ph="/// Checks that the kind of the current token matches the expected kind, and ... " />
-            <marker date="1509728694175" expanded="true" signature="870:1613" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="933:1129" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="1129:1603" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="1165:1264" ph="/* In the case of an error, give small message and current token ... */" />
-            <marker date="1509728694175" expanded="true" signature="1700:1853" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -297,7 +300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -305,15 +307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding>
-            <marker date="1509620418414" expanded="false" signature="6:95" ph="..." />
-            <marker date="1509620418414" expanded="true" signature="124:1143" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="153:1141" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="473:647" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="739:1135" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="832:1125" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="908:1062" ph="/* foreach (var token in compiler._scanner) ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -321,17 +314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1494">
           <caret line="83" column="20" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
-          <folding>
-            <marker date="1509729029234" expanded="true" signature="61:2495" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="95:2493" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="163:968" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="265:958" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1059:1327" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1227:1317" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1415:2487" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1525:2477" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1956:2035" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -339,17 +321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
           <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-          <folding>
-            <marker date="1509729211282" expanded="true" signature="0:167" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509729211282" expanded="true" signature="216:1296" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="250:1294" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="266:476" ph="/* TERMINALS ... */" />
-            <marker date="1509729211282" expanded="true" signature="486:577" ph="/* Parses an identifier, and constructs a leaf AST to represent it. ... */" />
-            <marker date="1509729211282" expanded="true" signature="608:730" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="805:919" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="997:1113" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="1179:1288" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -357,18 +328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding>
-            <marker date="1509728694175" expanded="true" signature="0:164" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728694175" expanded="true" signature="248:1862" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="282:1860" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="479:663" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="674:826" ph="/// Checks that the kind of the current token matches the expected kind, and ... " />
-            <marker date="1509728694175" expanded="true" signature="870:1613" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="933:1129" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="1129:1603" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="1165:1264" ph="/* In the case of an error, give small message and current token ... */" />
-            <marker date="1509728694175" expanded="true" signature="1700:1853" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -376,14 +335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <marker date="1509726090740" expanded="true" signature="61:677" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="94:675" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="258:331" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="398:512" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="549:591" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="625:669" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,17 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <marker date="1509729211282" expanded="true" signature="0:167" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509729211282" expanded="true" signature="216:1296" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="250:1294" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="266:476" ph="/* TERMINALS ... */" />
-            <marker date="1509729211282" expanded="true" signature="486:577" ph="/* Parses an identifier, and constructs a leaf AST to represent it. ... */" />
-            <marker date="1509729211282" expanded="true" signature="608:730" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="805:919" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="997:1113" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="1179:1288" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -453,17 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <marker date="1509729029234" expanded="true" signature="61:2495" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="95:2493" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="163:968" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="265:958" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1059:1327" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1227:1317" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1415:2487" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1525:2477" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1956:2035" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,18 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509728608255" expanded="true" signature="0:166" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728608255" expanded="true" signature="215:2759" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="249:2757" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="264:473" ph="/* COMMANDS ... */" />
-            <marker date="1509728608255" expanded="true" signature="533:798" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="694:788" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="869:2751" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="981:2741" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2466:2568" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2621:2700" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -491,18 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509728608255" expanded="true" signature="0:166" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728608255" expanded="true" signature="215:2759" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="249:2757" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="264:473" ph="/* COMMANDS ... */" />
-            <marker date="1509728608255" expanded="true" signature="533:798" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="694:788" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="869:2751" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="981:2741" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2466:2568" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2621:2700" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -511,18 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509728608255" expanded="true" signature="0:166" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728608255" expanded="true" signature="215:2759" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="249:2757" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="264:473" ph="/* COMMANDS ... */" />
-            <marker date="1509728608255" expanded="true" signature="533:798" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="694:788" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="869:2751" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="981:2741" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2466:2568" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2621:2700" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,13 +449,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Triangle.Compiler/test.tri" />
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/test-mini-error.tri">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/test-mini-error.tri" />
     <entry file="file://$PROJECT_DIR$/Triangle.Compiler/rubbish.tri" />
     <entry file="file://$PROJECT_DIR$/Triangle.Compiler/test.tri" />
     <entry file="file://$PROJECT_DIR$/Triangle.Compiler/test/code/printer.tri">
@@ -618,7 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,14 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <marker date="1509726090740" expanded="true" signature="61:677" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="94:675" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="258:331" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="398:512" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="549:591" ph="{...}" />
-            <marker date="1509726090740" expanded="true" signature="625:669" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,31 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <marker date="1509726103288" expanded="true" signature="46:475" ph="{...}" />
-            <marker date="1509726103288" expanded="true" signature="74:473" ph="{...}" />
-            <marker date="1509726103288" expanded="true" signature="261:335" ph="{...}" />
-            <marker date="1509726103288" expanded="true" signature="386:467" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Commands.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="73" column="75" lean-forward="false" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
-          <folding>
-            <marker date="1509728608255" expanded="true" signature="0:166" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728608255" expanded="true" signature="215:2759" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="249:2757" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="264:473" ph="/* COMMANDS ... */" />
-            <marker date="1509728608255" expanded="true" signature="533:798" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="694:788" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="869:2751" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="981:2741" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2466:2568" ph="{...}" />
-            <marker date="1509728608255" expanded="true" signature="2621:2700" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -673,18 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding>
-            <marker date="1509728694175" expanded="true" signature="0:164" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509728694175" expanded="true" signature="248:1862" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="282:1860" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="479:663" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="674:826" ph="/// Checks that the kind of the current token matches the expected kind, and ... " />
-            <marker date="1509728694175" expanded="true" signature="870:1613" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="933:1129" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="1129:1603" ph="{...}" />
-            <marker date="1509728694175" expanded="true" signature="1165:1264" ph="/* In the case of an error, give small message and current token ... */" />
-            <marker date="1509728694175" expanded="true" signature="1700:1853" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,17 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding>
-            <marker date="1509729029234" expanded="true" signature="61:2495" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="95:2493" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="163:968" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="265:958" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1059:1327" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1227:1317" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1415:2487" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1525:2477" ph="{...}" />
-            <marker date="1509729029234" expanded="true" signature="1956:2035" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,15 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
           <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-          <folding>
-            <marker date="1509728951130" expanded="true" signature="46:1816" ph="{...}" />
-            <marker date="1509728951130" expanded="true" signature="80:1814" ph="{...}" />
-            <marker date="1509728951130" expanded="true" signature="156:414" ph="{...}" />
-            <marker date="1509728951130" expanded="true" signature="319:404" ph="{...}" />
-            <marker date="1509728951130" expanded="true" signature="500:1629" ph="{...}" />
-            <marker date="1509728951130" expanded="true" signature="610:1619" ph="{...}" />
-            <marker date="1509728951130" expanded="true" signature="1704:1808" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,16 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <marker date="1509729157438" expanded="true" signature="46:1198" ph="{...}" />
-            <marker date="1509729157438" expanded="true" signature="80:1196" ph="{...}" />
-            <marker date="1509729157438" expanded="true" signature="99:195" ph="/// Parses a sequence of actual parameters, or returns if parameter ... " />
-            <marker date="1509729157438" expanded="true" signature="240:715" ph="{...}" />
-            <marker date="1509729157438" expanded="true" signature="418:485" ph="{...}" />
-            <marker date="1509729157438" expanded="true" signature="580:663" ph="{...}" />
-            <marker date="1509729157438" expanded="true" signature="796:1190" ph="{...}" />
-            <marker date="1509729157438" expanded="true" signature="904:1180" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,12 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-          <folding>
-            <marker date="1509120804745" expanded="true" signature="47:608" ph="{...}" />
-            <marker date="1509120804745" expanded="true" signature="81:606" ph="{...}" />
-            <marker date="1509120804745" expanded="true" signature="97:306" ph="/* PROGRAMS ... */" />
-            <marker date="1509120804745" expanded="true" signature="343:600" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,17 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
           <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-          <folding>
-            <marker date="1509729211282" expanded="true" signature="0:167" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509729211282" expanded="true" signature="216:1296" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="250:1294" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="266:476" ph="/* TERMINALS ... */" />
-            <marker date="1509729211282" expanded="true" signature="486:577" ph="/* Parses an identifier, and constructs a leaf AST to represent it. ... */" />
-            <marker date="1509729211282" expanded="true" signature="608:730" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="805:919" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="997:1113" ph="{...}" />
-            <marker date="1509729211282" expanded="true" signature="1179:1288" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,20 +568,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <marker date="1509729224758" expanded="true" signature="0:164" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
-            <marker date="1509729224758" expanded="true" signature="213:678" ph="{...}" />
-            <marker date="1509729224758" expanded="true" signature="247:676" ph="{...}" />
-            <marker date="1509729224758" expanded="true" signature="263:489" ph="/* VALUE-OR-VARIABLE NAMES ... */" />
-            <marker date="1509729224758" expanded="true" signature="557:669" ph="{...}" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourceFile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourcePosition.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/test-mini.tri" />
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Token.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/TokenKind.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/Compiler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Scanner.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1794">
-          <caret line="100" column="71" lean-forward="false" selection-start-line="100" selection-start-column="71" selection-end-line="100" selection-end-column="71" />
+        <state relative-caret-position="522">
+          <caret line="131" column="46" lean-forward="true" selection-start-line="129" selection-start-column="16" selection-end-line="131" selection-end-column="46" />
           <folding>
             <marker date="1509729337598" expanded="false" signature="6:191" ph="..." />
             <marker date="1509729337598" expanded="true" signature="238:6941" ph="{...}" />
@@ -821,94 +644,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourceFile.cs">
+    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Parser - Commands.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-318">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="558">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
-            <marker date="1509101547197" expanded="false" signature="6:64" ph="..." />
-            <marker date="1509101547197" expanded="true" signature="111:2427" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="160:2425" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="318:635" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="379:523" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="565:625" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="672:737" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="1060:1148" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="1180:1439" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="1223:1392" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="1310:1378" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="1468:1830" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="1855:2023" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="2054:2140" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="2196:2419" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="2233:2409" ph="{...}" />
-            <marker date="1509101547197" expanded="true" signature="2284:2395" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/SourcePosition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <marker date="1509100651396" expanded="true" signature="46:538" ph="{...}" />
-            <marker date="1509100651396" expanded="true" signature="80:536" ph="{...}" />
-            <marker date="1509100651396" expanded="true" signature="347:414" ph="{...}" />
-            <marker date="1509100651396" expanded="true" signature="458:530" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/test-mini.tri">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/Token.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-          <folding>
-            <marker date="1509121150138" expanded="false" signature="6:66" ph="..." />
-            <marker date="1509121150138" expanded="true" signature="113:1489" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="138:1487" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="818:1171" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="900:1099" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="1015:1085" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="1202:1253" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="1285:1338" ph="{...}" />
-            <marker date="1509121150138" expanded="true" signature="1381:1481" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/SyntacticAnalyzer/TokenKind.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <marker date="1507825679000" expanded="true" signature="45:610" ph="{...}" />
-            <marker date="1507825679000" expanded="true" signature="73:608" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Triangle.Compiler/Compiler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <marker date="1509620418414" expanded="false" signature="6:95" ph="..." />
-            <marker date="1509620418414" expanded="true" signature="124:1143" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="153:1141" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="473:647" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="739:1135" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="832:1125" ph="{...}" />
-            <marker date="1509620418414" expanded="true" signature="908:1062" ph="/* foreach (var token in compiler._scanner) ... */" />
+            <marker date="1509728608255" expanded="true" signature="0:166" ph="/* @Author: John Isaacs &lt;john&gt; ... */" />
+            <marker date="1509728608255" expanded="true" signature="215:2759" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="249:2757" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="264:473" ph="/* COMMANDS ... */" />
+            <marker date="1509728608255" expanded="true" signature="533:798" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="694:788" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="869:2751" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="981:2741" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="2466:2568" ph="{...}" />
+            <marker date="1509728608255" expanded="true" signature="2621:2700" ph="{...}" />
           </folding>
         </state>
       </provider>
