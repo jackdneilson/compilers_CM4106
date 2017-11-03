@@ -1,5 +1,6 @@
 ﻿namespace Triangle.Compiler.SyntacticAnalyzer {
     public partial class Parser {
+        //Parses one or more declarations
         void ParseDeclaration() {
             System.Console.WriteLine("Parsing declaration");
             ParseSingleDeclaration();
@@ -8,7 +9,8 @@
                 ParseSingleDeclaration();
             }
         }
-
+        
+        //Parses a single declaration
         void ParseSingleDeclaration() {
             System.Console.WriteLine("Parsing single declaration");
             switch (_currentToken.Kind) {
@@ -41,6 +43,7 @@
             }
         }
 
+        //Parses a variable type denoter
         void ParseTypeDenoter() {
             System.Console.WriteLine("Parsing type denoter");
             ParseIdentifier();

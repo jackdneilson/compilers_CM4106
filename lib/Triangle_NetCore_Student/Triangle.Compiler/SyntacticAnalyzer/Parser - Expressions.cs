@@ -2,6 +2,7 @@
 
 namespace Triangle.Compiler.SyntacticAnalyzer {
     public partial class Parser {
+        //Parses a full expression
         void ParseExpression() {
             System.Console.WriteLine("Parsing expression");
             switch (_currentToken.Kind) {
@@ -30,6 +31,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
             }
         }
 
+        //Parses one or more primary expressions
         void ParseSecondaryExpression() {
             System.Console.WriteLine("Parsing secondary expression");
             ParsePrimaryExpression();
@@ -39,6 +41,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
             }
         }
 
+        //Parses a single part of an expression
         void ParsePrimaryExpression() {
             System.Console.WriteLine("Parsing primary expression");
             switch (_currentToken.Kind) {
@@ -70,17 +73,6 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
                     AcceptIt();
                     ParseExpression();
                     Accept(TokenKind.RightParen);
-                    break;
-                }
-                    
-                default: {
-                    Console.WriteLine(_currentToken.Spelling);
-                    _reporter.ReportError("Error while parsing expresion line: "
-                                          + _currentToken.getLine()
-                                          + " index: "
-                                          + _currentToken.getIndex()
-                                          + " got " + _currentToken.Spelling,
-                        _currentToken);
                     break;
                 }
             }

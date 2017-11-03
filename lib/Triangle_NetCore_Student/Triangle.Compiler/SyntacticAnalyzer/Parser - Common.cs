@@ -42,11 +42,12 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                 _currentToken = _tokens.Current;
             }
             else {
+                //In the case of an error, give small message and current token
+                //to error reporter
                 _reporter.ReportError("Error line: " + _currentToken.getLine()
                                       + " index: " + _currentToken.getIndex()
                                       + " expected " + expectedKind
-                                      + ", got " + _currentToken.ToString(),
-                                       
+                                      + ", got ",              
                     _currentToken);
             }
         }

@@ -28,6 +28,8 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             _debug = true;
             return this;
         }
+        
+        //Returns an enumerater with all tokens in the source file
         public IEnumerator<Token> GetEnumerator()
         {
             while (true)
@@ -71,8 +73,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         }
 
 
-        //Skip a single separator.
-       
+        //Skip all white space.
         void ScanSeparator()
         {
             switch (_source.Current) {
@@ -97,6 +98,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
 		//Build up tokens.
 		TokenKind ScanToken()
         {
+            //Regular expression to match any character in the alphabet
             Regex token = new Regex("^[a-zA-Z]+");
 
             if (token.IsMatch(((char) _source.Current).ToString())) {

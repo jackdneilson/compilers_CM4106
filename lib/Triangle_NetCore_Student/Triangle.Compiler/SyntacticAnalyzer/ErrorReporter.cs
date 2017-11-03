@@ -5,6 +5,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
         private Boolean errorFound;
         private int numberErrors;
 
+        //Helper class for the compiler to report errors to
         public ErrorReporter() {
             errorFound = false;
             numberErrors = 0;
@@ -13,7 +14,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
         public void ReportError(string msg, Token token) {
             errorFound = true;
             numberErrors++;
-            Console.WriteLine(msg);
+            Console.WriteLine(msg + token);
         }
 
         public Boolean HasErrors() {

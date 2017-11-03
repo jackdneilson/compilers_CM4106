@@ -1,5 +1,8 @@
 ﻿namespace Triangle.Compiler.SyntacticAnalyzer {
     public partial class Parser {
+        
+        ///Parses a sequence of actual parameters, or returns if parameter
+        /// sequence is empty
         void ParseActualParameterSequence() {
             System.Console.WriteLine("Parsing actual parameter sequence");
             Accept(TokenKind.LeftParen);
@@ -15,6 +18,7 @@
             Accept(TokenKind.RightParen);
         }
 
+        //Parses a single actual parameter
         void ParseActualParameter() {
             System.Console.WriteLine("Parsing actual parameter");
             switch (_currentToken.Kind) {

@@ -19,7 +19,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         ///////////////////////////////////////////////////////////////////////////////
 
 
-        /// Parses the command error
+        /// Parses a command 
         void ParseCommand()
         {
           System.Console.WriteLine("Parsing command");
@@ -31,8 +31,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             }
         }
 
-        /// Parses the single command
-        //TODO: Review if should look for identifier or should parse vname
+        /// Parses a single command
         void ParseSingleCommand()
         {
           System.Console.WriteLine("Parsing single command");
@@ -72,6 +71,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                         break;
                     }
 
+                //In the case of trailing else or hitting end, simply break
                 case TokenKind.End:
                 case TokenKind.Else:
                 case TokenKind.EndOfText: {

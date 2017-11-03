@@ -28,16 +28,19 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             Accept(TokenKind.Identifier);
         }
 
+        //Parses a single integer literal
         void ParseIntLiteral() {
             System.Console.WriteLine("Parsing int literal");
             Accept(TokenKind.IntLiteral);
         }
 
+        //Parses a single character literal
         void ParseCharLiteral() {
             System.Console.WriteLine("Parsing char literal");
             Accept(TokenKind.CharLiteral);
         }
 
+        //Parses a single operator
         void ParseOperator() {
             System.Console.WriteLine("Parsing operator");
             Accept(TokenKind.Operator);
