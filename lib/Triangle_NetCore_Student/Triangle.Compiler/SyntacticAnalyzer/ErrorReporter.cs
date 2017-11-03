@@ -13,7 +13,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
         public void ReportError(string msg, Token token) {
             errorFound = true;
             numberErrors++;
-            Console.WriteLine(msg + token.Kind);
+            Console.WriteLine(msg);
         }
 
         public Boolean HasErrors() {

@@ -44,8 +44,9 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             else {
                 _reporter.ReportError("Error line: " + _currentToken.getLine()
                                       + " index: " + _currentToken.getIndex()
-                                      + ", got " + _currentToken.Kind
-                                      + " expected " + expectedKind, 
+                                      + " expected " + expectedKind
+                                      + ", got " + _currentToken.ToString(),
+                                       
                     _currentToken);
             }
         }

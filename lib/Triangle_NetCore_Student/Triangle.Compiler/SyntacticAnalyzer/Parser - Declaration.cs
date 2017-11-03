@@ -1,10 +1,7 @@
 ﻿namespace Triangle.Compiler.SyntacticAnalyzer {
     public partial class Parser {
         void ParseDeclaration() {
-            System.Console.WriteLine("Parsing declaration line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing declaration");
             ParseSingleDeclaration();
             while (_currentToken.Kind == TokenKind.Semicolon) {
                 AcceptIt();
@@ -13,10 +10,7 @@
         }
 
         void ParseSingleDeclaration() {
-            System.Console.WriteLine("Parsing single declaration line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing single declaration");
             switch (_currentToken.Kind) {
                 case TokenKind.Const: {
                     AcceptIt();
@@ -48,10 +42,7 @@
         }
 
         void ParseTypeDenoter() {
-            System.Console.WriteLine("Parsing type denoter line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing type denoter");
             ParseIdentifier();
         }
     }

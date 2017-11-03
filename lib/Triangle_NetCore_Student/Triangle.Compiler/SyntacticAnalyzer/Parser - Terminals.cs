@@ -24,34 +24,22 @@ namespace Triangle.Compiler.SyntacticAnalyzer
          */
         void ParseIdentifier()
         {
-            System.Console.WriteLine("Parsing identifier line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing identifier");
             Accept(TokenKind.Identifier);
         }
 
         void ParseIntLiteral() {
-            System.Console.WriteLine("Parsing int literal line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing int literal");
             Accept(TokenKind.IntLiteral);
         }
 
         void ParseCharLiteral() {
-            System.Console.WriteLine("Parsing char literal line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing char literal");
             Accept(TokenKind.CharLiteral);
         }
 
         void ParseOperator() {
-            System.Console.WriteLine("Parsing operator line: " 
-                                     + _currentToken.getLine()
-                                     + " index: "
-                                     + _currentToken.getIndex());
+            System.Console.WriteLine("Parsing operator");
             Accept(TokenKind.Operator);
         }
     }

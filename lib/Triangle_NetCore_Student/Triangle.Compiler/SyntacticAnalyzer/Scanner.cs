@@ -129,23 +129,27 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                     TakeIt();
                     return TokenKind.Operator;
                     
+                case '-':
+                    TakeIt();
+                    return TokenKind.Operator;
+                    
                 case '~':
                     TakeIt();
                     return TokenKind.Is;
                     
                 case ':':
                     TakeIt();
-                    return TokenKind.Colon;
-                    
-                case ';':
-                    TakeIt();
                     if (_source.Current == '=') {
                         TakeIt();
                         return TokenKind.Becomes;
                     }
                     else {
-                        return TokenKind.Semicolon;
+                        return TokenKind.Colon;
                     }
+                    
+                case ';':
+                    TakeIt();
+                    return TokenKind.Semicolon;
                     
                 case '(':
                     TakeIt();
@@ -172,6 +176,10 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                     TakeIt();
                     return TokenKind.Operator;
                     
+                case '=':
+                    TakeIt();
+                    return TokenKind.Operator;
+                    
                 case '/':
                     TakeIt();
                     if (_source.Current == '\\') {
@@ -182,6 +190,10 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                         return TokenKind.Error;
                     }
                     
+                case '\\':
+                    TakeIt();
+                    return TokenKind.Operator;
+                    
                 
                     
                 case -1:
@@ -189,6 +201,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
           
                 default:
                     TakeIt();
+                    Console.WriteLine("\n" + _currentSpelling + "\n");
                     return TokenKind.Error;
             }
         }

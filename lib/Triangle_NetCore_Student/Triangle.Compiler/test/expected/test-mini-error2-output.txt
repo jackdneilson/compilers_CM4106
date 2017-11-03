@@ -1,0 +1,59 @@
+parsing Program
+parsing command
+parsing single command
+parsing declaration
+parsing single declaration
+parsing identifier
+parsing expression
+parsing secondary expression
+parsing primary expression
+parsing integer
+parsing single declaration
+parsing identifier
+parsing type denoter
+parsing identifier
+parsing single command
+parsing command
+parsing single command
+parsing expression
+parsing secondary expression
+parsing primary expression
+parsing expression
+parsing secondary expression
+parsing primary expression
+parsing identifier
+parsing operator
+parsing primary expression
+parsing integer
+parsing operator
+parsing primary expression
+parsing expression
+parsing secondary expression
+parsing primary expression
+parsing identifier
+parsing operator
+parsing primary expression
+parsing identifier
+parsing single command
+parsing expression
+parsing secondary expression
+parsing primary expression
+parsing identifier
+parsing operator
+parsing primary expression
+parsing integer
+parsing single command
+parsing command
+parsing single command
+parsing variable name
+parsing identifier
+parsing expression
+parsing secondary expression
+parsing primary expression
+parsing identifier
+parsing operator
+parsing primary expression
+parsing integer
+Error: Expected :Else got :Kind=EndOfText, spelling="" value: 
+parsing single command
+Error: Expected :End got :Kind=EndOfText, spelling="" value:

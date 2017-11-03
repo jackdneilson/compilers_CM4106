@@ -22,10 +22,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         /// Parses the command error
         void ParseCommand()
         {
-          System.Console.WriteLine("Parsing command line: " 
-                                   + _currentToken.getLine()
-                                   + " index: "
-                                   + _currentToken.getIndex());
+          System.Console.WriteLine("Parsing command");
             ParseSingleCommand();
             while (_currentToken.Kind == TokenKind.Semicolon)
             {
@@ -38,10 +35,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         //TODO: Review if should look for identifier or should parse vname
         void ParseSingleCommand()
         {
-          System.Console.WriteLine("Parsing single command line: " 
-                                   + _currentToken.getLine()
-                                   + " index: "
-                                   + _currentToken.getIndex());
+          System.Console.WriteLine("Parsing single command");
             switch (_currentToken.Kind)
             {   
                 case TokenKind.If: {
@@ -74,8 +68,15 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                     {
                         AcceptIt();
                         ParseCommand();
+                        Accept(TokenKind.End);
                         break;
                     }
+
+                case TokenKind.End:
+                case TokenKind.Else:
+                case TokenKind.EndOfText: {
+                    break;
+                }
 
                 default:
                     ParseVname();
@@ -83,9 +84,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                         AcceptIt();
                         ParseExpression();
                     } else if (_currentToken.Kind == TokenKind.LeftParen) {
-                        AcceptIt();
-                        ParseExpression();
-                        Accept(TokenKind.RightParen);
+                        ParseActualParameterSequence();
                     }
                     break;
             }

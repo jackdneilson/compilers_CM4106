@@ -22,10 +22,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
 
         void ParseVname()
         {
-          System.Console.WriteLine("Parsing variable name line: " 
-                                   + _currentToken.getLine()
-                                   + " index: "
-                                   + _currentToken.getIndex());
+          System.Console.WriteLine("Parsing variable name");
             ParseIdentifier();
         }
 
