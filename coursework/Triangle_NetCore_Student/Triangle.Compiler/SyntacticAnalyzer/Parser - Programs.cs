@@ -14,7 +14,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
 
         public void ParseProgram()
         {
-                System.Console.WriteLine("Parsing Program");
+                System.Console.WriteLine("parsing Program");
                 _tokens.MoveNext();
                 _currentToken = _tokens.Current;
                 //var startLocation = _currentToken.Start;

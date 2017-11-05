@@ -172,16 +172,28 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                     
                 case '>':
                     TakeIt();
-                    return TokenKind.Operator;
-                    
+                    if (_source.Current == '=') {
+                        TakeIt();
+                        return TokenKind.Operator;
+                    }
+                    else {
+                        return TokenKind.Operator;
+                    }
+
                 case '<':
                     TakeIt();
-                    return TokenKind.Operator;
+                    if (_source.Current == '=') {
+                        TakeIt();
+                        return TokenKind.Operator;
+                    }
+                    else {
+                        return TokenKind.Operator;
+                    }
                     
                 case '=':
                     TakeIt();
                     return TokenKind.Operator;
-                    
+                         
                 case '/':
                     TakeIt();
                     if (_source.Current == '\\') {

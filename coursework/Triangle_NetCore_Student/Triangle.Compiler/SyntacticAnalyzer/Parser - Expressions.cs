@@ -4,7 +4,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
     public partial class Parser {
         //Parses a full expression
         void ParseExpression() {
-            System.Console.WriteLine("Parsing expression");
+            System.Console.WriteLine("parsing expression");
             switch (_currentToken.Kind) {
                 case TokenKind.Let: {
                     AcceptIt();
@@ -33,7 +33,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
 
         //Parses one or more primary expressions
         void ParseSecondaryExpression() {
-            System.Console.WriteLine("Parsing secondary expression");
+            System.Console.WriteLine("parsing secondary expression");
             ParsePrimaryExpression();
             if (_currentToken.Kind == TokenKind.Operator) {
                 ParseOperator();
@@ -43,7 +43,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
 
         //Parses a single part of an expression
         void ParsePrimaryExpression() {
-            System.Console.WriteLine("Parsing primary expression");
+            System.Console.WriteLine("parsing primary expression");
             switch (_currentToken.Kind) {
                 case TokenKind.IntLiteral: {
                     ParseIntLiteral();
@@ -56,7 +56,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer {
                 }
 
                 case TokenKind.Identifier: {
-                    ParseVname();
+                    ParseIdentifier();
                     if (_currentToken.Kind == TokenKind.LeftParen) {
                         ParseActualParameterSequence();
                     }

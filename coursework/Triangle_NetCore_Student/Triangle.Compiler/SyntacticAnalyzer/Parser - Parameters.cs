@@ -4,7 +4,7 @@
         ///Parses a sequence of actual parameters, or returns if parameter
         /// sequence is empty
         void ParseActualParameterSequence() {
-            System.Console.WriteLine("Parsing actual parameter sequence");
+            System.Console.WriteLine("parsing actual parameter sequence");
             Accept(TokenKind.LeftParen);
             if (_currentToken.Kind == TokenKind.RightParen) {
                 AcceptIt();
@@ -20,7 +20,7 @@
 
         //Parses a single actual parameter
         void ParseActualParameter() {
-            System.Console.WriteLine("Parsing actual parameter");
+            System.Console.WriteLine("parsing actual parameter");
             switch (_currentToken.Kind) {
                 case TokenKind.Var: {
                     AcceptIt();

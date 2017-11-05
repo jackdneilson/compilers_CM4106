@@ -24,25 +24,25 @@ namespace Triangle.Compiler.SyntacticAnalyzer
          */
         void ParseIdentifier()
         {
-            System.Console.WriteLine("Parsing identifier");
+            System.Console.WriteLine("parsing identifier");
             Accept(TokenKind.Identifier);
         }
 
         //Parses a single integer literal
         void ParseIntLiteral() {
-            System.Console.WriteLine("Parsing int literal");
+            System.Console.WriteLine("parsing integer");
             Accept(TokenKind.IntLiteral);
         }
 
         //Parses a single character literal
         void ParseCharLiteral() {
-            System.Console.WriteLine("Parsing char literal");
+            System.Console.WriteLine("parsing char literal");
             Accept(TokenKind.CharLiteral);
         }
 
         //Parses a single operator
         void ParseOperator() {
-            System.Console.WriteLine("Parsing operator");
+            System.Console.WriteLine("parsing operator");
             Accept(TokenKind.Operator);
         }
     }

@@ -2,7 +2,7 @@
     public partial class Parser {
         //Parses one or more declarations
         void ParseDeclaration() {
-            System.Console.WriteLine("Parsing declaration");
+            System.Console.WriteLine("parsing declaration");
             ParseSingleDeclaration();
             while (_currentToken.Kind == TokenKind.Semicolon) {
                 AcceptIt();
@@ -12,7 +12,7 @@
         
         //Parses a single declaration
         void ParseSingleDeclaration() {
-            System.Console.WriteLine("Parsing single declaration");
+            System.Console.WriteLine("parsing single declaration");
             switch (_currentToken.Kind) {
                 case TokenKind.Const: {
                     AcceptIt();
@@ -45,7 +45,7 @@
 
         //Parses a variable type denoter
         void ParseTypeDenoter() {
-            System.Console.WriteLine("Parsing type denoter");
+            System.Console.WriteLine("parsing type denoter");
             ParseIdentifier();
         }
     }

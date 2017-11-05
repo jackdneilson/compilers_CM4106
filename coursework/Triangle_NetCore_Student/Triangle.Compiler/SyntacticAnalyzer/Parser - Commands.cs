@@ -22,7 +22,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         /// Parses a command 
         void ParseCommand()
         {
-          System.Console.WriteLine("Parsing command");
+          System.Console.WriteLine("parsing command");
             ParseSingleCommand();
             while (_currentToken.Kind == TokenKind.Semicolon)
             {
@@ -34,7 +34,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         /// Parses a single command
         void ParseSingleCommand()
         {
-          System.Console.WriteLine("Parsing single command");
+          System.Console.WriteLine("parsing single command");
             switch (_currentToken.Kind)
             {   
                 case TokenKind.If: {

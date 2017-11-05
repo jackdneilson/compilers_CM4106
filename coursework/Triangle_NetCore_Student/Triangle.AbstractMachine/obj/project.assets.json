@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Microsoft.NETCore.App/2.0.0": {
@@ -702,7 +702,8 @@
     ]
   },
   "packageFolders": {
-    "/home/jack/.nuget/packages/": {}
+    "/home/jack/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -710,15 +711,30 @@
       "projectUniqueName": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
       "projectName": "Triangle.AbstractMachine",
       "projectPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj",
+      "packagesPath": "/home/jack/.nuget/packages/",
       "outputPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/home/jack/.nuget/NuGet/NuGet.Config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {}
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -727,13 +743,19 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0"
+            "version": "2.0.0",
+            "autoReferenced": true
           },
           "NuGet.Build.Packaging": {
             "target": "Package",
             "version": "0.1.276"
           }
-        }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
       }
     }
   }
