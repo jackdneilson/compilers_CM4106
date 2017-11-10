@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Triangle.Compiler.SyntacticAnalyzer
 {
@@ -28,8 +25,6 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             _debug = true;
             return this;
         }
-        
-        //Returns an enumerater with all tokens in the source file
         public IEnumerator<Token> GetEnumerator()
         {
             while (true)
@@ -41,9 +36,9 @@ namespace Triangle.Compiler.SyntacticAnalyzer
 
                 _currentSpelling.Clear();
 
-                var startLocation = _source.location();
+                var startLocation = _source.Location;
                 var kind = ScanToken();
-                var endLocation = _source.location();
+                var endLocation = _source.Location;
                 var position = new SourcePosition(startLocation, endLocation);
 
                 var token = new Token(kind, _currentSpelling.ToString(), position);
@@ -62,54 +57,102 @@ namespace Triangle.Compiler.SyntacticAnalyzer
             return GetEnumerator();
         }
 
-     
-        // Appends the current character to the current token, and gets
-        //the next character from the source program.
-
+        /// <summary>
+        /// Appends the current character to the current token, and gets
+        /// the next character from the source program.
+        /// </summary>
         void TakeIt()
         {
             _currentSpelling.Append((char)_source.Current);
             _source.MoveNext();
         }
 
-
-        //Skip all white space.
+        /// <summary>
+        /// Skip a single separator.
+        /// </summary>
         void ScanSeparator()
         {
-            switch (_source.Current) {
+            switch (_source.Current)
+            {
                 case '!':
-                    while (!(_source.Current.Equals('\n'))) {
-                        TakeIt();
-                    }
+                    _source.SkipRestOfLine();
+                    _source.MoveNext();
                     break;
+
                 case ' ':
-                    TakeIt();
-                    break;
-                case '\t':
-                    TakeIt();
-                    break;
                 case '\n':
-                    TakeIt();
+                case '\r':
+                case '\t':
+                    _source.MoveNext();
                     break;
             }
-                
         }
 
-		//Build up tokens.
-		TokenKind ScanToken()
+        TokenKind ScanToken()
         {
-            //Regular expression to match any character in the alphabet
-            Regex token = new Regex("^[a-zA-Z]+");
 
-            if (token.IsMatch(((char) _source.Current).ToString())) {
-                while (token.IsMatch(((char) _source.Current).ToString())) {
-                    TakeIt();
-                }
-                return TokenKind.Identifier;
-            }
-            
             switch (_source.Current)
-            {   
+            {
+
+                case 'a':
+                case 'b':
+                case 'c':
+                case 'd':
+                case 'e':
+                case 'f':
+                case 'g':
+                case 'h':
+                case 'i':
+                case 'j':
+                case 'k':
+                case 'l':
+                case 'm':
+                case 'n':
+                case 'o':
+                case 'p':
+                case 'q':
+                case 'r':
+                case 's':
+                case 't':
+                case 'u':
+                case 'v':
+                case 'w':
+                case 'x':
+                case 'y':
+                case 'z':
+                case 'A':
+                case 'B':
+                case 'C':
+                case 'D':
+                case 'E':
+                case 'F':
+                case 'G':
+                case 'H':
+                case 'I':
+                case 'J':
+                case 'K':
+                case 'L':
+                case 'M':
+                case 'N':
+                case 'O':
+                case 'P':
+                case 'Q':
+                case 'R':
+                case 'S':
+                case 'T':
+                case 'U':
+                case 'V':
+                case 'W':
+                case 'X':
+                case 'Y':
+                case 'Z':
+                    TakeIt();
+                    while (IsLetter(_source.Current) || IsDigit(_source.Current))
+                    {
+                        TakeIt();
+                    }
+                    return TokenKind.Identifier;
+
                 case '0':
                 case '1':
                 case '2':
@@ -126,96 +169,91 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                         TakeIt();
                     }
                     return TokenKind.IntLiteral;
-                    
+
                 case '+':
-                    TakeIt();
-                    return TokenKind.Operator;
-                    
                 case '-':
+                case '*':
+                case '/':
+                case '=':
+                case '<':
+                case '>':
+                case '\\':
+                case '&':
+                case '@':
+                case '%':
+                case '^':
+                case '?':
                     TakeIt();
+                    while (IsOperator(_source.Current))
+                    {
+                        TakeIt();
+                    }
                     return TokenKind.Operator;
-                    
-                case '~':
+
+                case '\'':
                     TakeIt();
-                    return TokenKind.Is;
-                    
+                    TakeIt(); // the quoted character
+                    if (_source.Current == '\'')
+                    {
+                        TakeIt();
+                        return TokenKind.CharLiteral;
+                    }
+                    return TokenKind.Error;
+
+                case '.':
+                    TakeIt();
+                    return TokenKind.Dot;
+
                 case ':':
                     TakeIt();
-                    if (_source.Current == '=') {
+                    if (_source.Current == '=')
+                    {
                         TakeIt();
                         return TokenKind.Becomes;
                     }
-                    else {
-                        return TokenKind.Colon;
-                    }
-                    
+                    return TokenKind.Colon;
+
                 case ';':
                     TakeIt();
                     return TokenKind.Semicolon;
-                    
+
+                case ',':
+                    TakeIt();
+                    return TokenKind.Comma;
+
+                case '~':
+                    TakeIt();
+                    return TokenKind.Is;
+
                 case '(':
                     TakeIt();
                     return TokenKind.LeftParen;
-                    
+
                 case ')':
                     TakeIt();
                     return TokenKind.RightParen;
-                    
-                case '\'':
-                    TakeIt();
-                    _currentSpelling.Remove(_currentSpelling.Length - 1, 1);
-                    TakeIt();
-                    TakeIt();
-                    _currentSpelling.Remove(_currentSpelling.Length - 1, 1);
 
-                    return TokenKind.CharLiteral;
-                    
-                case '>':
+                case '[':
                     TakeIt();
-                    if (_source.Current == '=') {
-                        TakeIt();
-                        return TokenKind.Operator;
-                    }
-                    else {
-                        return TokenKind.Operator;
-                    }
+                    return TokenKind.LeftBracket;
 
-                case '<':
+                case ']':
                     TakeIt();
-                    if (_source.Current == '=') {
-                        TakeIt();
-                        return TokenKind.Operator;
-                    }
-                    else {
-                        return TokenKind.Operator;
-                    }
-                    
-                case '=':
+                    return TokenKind.RightBracket;
+
+                case '{':
                     TakeIt();
-                    return TokenKind.Operator;
-                         
-                case '/':
+                    return TokenKind.LeftCurly;
+
+                case '}':
                     TakeIt();
-                    if (_source.Current == '\\') {
-                        TakeIt();
-                        return TokenKind.Operator;
-                    }
-                    else {
-                        return TokenKind.Error;
-                    }
-                    
-                case '\\':
-                    TakeIt();
-                    return TokenKind.Operator;
-                    
-                
-                    
+                    return TokenKind.RightCurly;
+
                 case -1:
                     return TokenKind.EndOfText;
-          
+
                 default:
                     TakeIt();
-                    Console.WriteLine("\n" + _currentSpelling + "\n");
                     return TokenKind.Error;
             }
         }

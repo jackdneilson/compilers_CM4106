@@ -1,12 +1,5 @@
-/**
- * @Author: John Isaacs <john>
- * @Date:   19-Oct-172017
- * @Filename: Parser - Vnames.cs
- * @Last modified by:   john
- * @Last modified time: 19-Oct-172017
- */
-
-
+using Triangle.Compiler.SyntaxTrees.Terminals;
+using Triangle.Compiler.SyntaxTrees.Vnames;
 
 namespace Triangle.Compiler.SyntacticAnalyzer
 {
@@ -19,13 +12,25 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         //
         // /////////////////////////////////////////////////////////////////////////////
 
-
-        //Parses a single variable name
+        /**
+         * Parses the v-name, and constructs an AST to represent its phrase structure.
+         * 
+         * @return a {@link triangle.compiler.syntax.trees.vnames.Vname}
+         * 
+         * @throws SyntaxError
+         *           a syntactic error
+         * 
+         */
         void ParseVname()
         {
-          System.Console.WriteLine("parsing variable name");
-            ParseIdentifier();
+            Identifier ident = ParseIdentifier();
+            ParseRestOfVname(ident);
         }
 
+        Vname ParseRestOfVname(Identifier ident)
+        {
+            var pos = new SourcePosition(ident.Start, ident.Finish);
+            return new SimpleVname(ident, pos);
+        }
     }
 }
