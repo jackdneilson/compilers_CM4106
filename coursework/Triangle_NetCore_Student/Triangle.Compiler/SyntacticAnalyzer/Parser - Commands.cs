@@ -14,7 +14,7 @@ namespace Triangle.Compiler.SyntacticAnalyzer
 
         /// <summary>
         /// Parses the command, and constructs an AST to represent its phrase
-        /// structure.
+        /// structure. 
         /// </summary>
         /// <returns>
         /// a <link>Triangle.SyntaxTrees.Commands.Command</link>

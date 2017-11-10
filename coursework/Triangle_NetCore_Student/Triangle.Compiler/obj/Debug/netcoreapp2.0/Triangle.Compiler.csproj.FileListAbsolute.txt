@@ -31,3 +31,7 @@ H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compi
 H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\obj\Debug\netcoreapp2.0\Triangle.Compiler.AssemblyInfo.cs
 H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\obj\Debug\netcoreapp2.0\Triangle.Compiler.dll
 H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\obj\Debug\netcoreapp2.0\Triangle.Compiler.pdb
+H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\bin\Debug\netcoreapp2.0\Triangle.Compiler.dll
+H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\bin\Debug\netcoreapp2.0\Triangle.Compiler.pdb
+H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\bin\Debug\netcoreapp2.0\Triangle.AbstractMachine.dll
+H:\Documents\compilers_CM4106\coursework\Triangle_NetCore_Student\Triangle.Compiler\bin\Debug\netcoreapp2.0\Triangle.AbstractMachine.pdb

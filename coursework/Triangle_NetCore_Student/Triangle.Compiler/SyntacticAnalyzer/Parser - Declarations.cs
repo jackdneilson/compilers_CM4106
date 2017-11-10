@@ -77,11 +77,9 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                 default:
                     {
                         RaiseSyntacticError("\"%\" cannot start a declaration", _currentToken);
-                        break;
+                        return null;
                     }
-
             }
-
         }
     }
 }

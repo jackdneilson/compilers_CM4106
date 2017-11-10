@@ -1,4 +1,6 @@
 using Triangle.Compiler.SyntaxTrees.Actuals;
+using Triangle.Compiler.SyntaxTrees.Expressions;
+using Triangle.Compiler.SyntaxTrees.Vnames;
 
 
 namespace Triangle.Compiler.SyntacticAnalyzer
@@ -54,17 +56,18 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         ActualParameterSequence ParseProperActualParameterSequence()
         {
             var startLocation = _currentToken.Position.Start;
-            ParseActualParameter();
+            ActualParameter param = ParseActualParameter();
             if (_currentToken.Kind == TokenKind.Comma)
             {
                 AcceptIt();
-                ParseProperActualParameterSequence();
-                var actualsPosition = new SourcePosition(startLocation, _currentToken.Position.Finish);
-
+                ActualParameterSequence seq = ParseProperActualParameterSequence();
+                var pos = new SourcePosition(startLocation, _currentToken.Position.Finish);
+                return new MultipleActualParameterSequence(param, seq, pos);
             }
             else
             {
-                var actualsPosition = new SourcePosition(startLocation, _currentToken.Position.Finish);
+                var pos = new SourcePosition(startLocation, _currentToken.Position.Finish);
+                return new SingleActualParameterSequence(param, pos);
             }
            
         }
@@ -79,13 +82,11 @@ namespace Triangle.Compiler.SyntacticAnalyzer
          *           a syntactic error
          * 
          */
-        void ParseActualParameter()
+        ActualParameter ParseActualParameter()
         {
-
             var startLocation = _currentToken.Position.Start;
             switch (_currentToken.Kind)
             {
-
                 case TokenKind.Identifier:
                 case TokenKind.IntLiteral:
                 case TokenKind.CharLiteral:
@@ -96,23 +97,23 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                 case TokenKind.LeftBracket:
                 case TokenKind.LeftCurly:
                     {
-                        ParseExpression();
-                        var actualPosition = new SourcePosition(startLocation, _currentToken.Position.Finish);
-                        break;
+                        Expression exp = ParseExpression();
+                        var pos = new SourcePosition(startLocation, _currentToken.Position.Finish);
+                        return new ConstActualParameter(exp, pos);
                     }
 
                 case TokenKind.Var:
                     {
                         AcceptIt();
-                        ParseVname();
-                        var actualPosition = new SourcePosition(startLocation, _currentToken.Position.Finish);
-                        break;
+                        Vname varName = ParseVname();
+                        var pos = new SourcePosition(startLocation, _currentToken.Position.Finish);
+                        return new VarActualParameter(varName, pos);
                     }
 
                 default:
                     {
                         RaiseSyntacticError("\"%\" cannot start an actual parameter", _currentToken);
-                        break;
+                        return null;
                     }
 
             }

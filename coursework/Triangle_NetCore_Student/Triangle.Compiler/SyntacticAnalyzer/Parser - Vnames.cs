@@ -21,10 +21,10 @@ namespace Triangle.Compiler.SyntacticAnalyzer
          *           a syntactic error
          * 
          */
-        void ParseVname()
+        Vname ParseVname()
         {
             Identifier ident = ParseIdentifier();
-            ParseRestOfVname(ident);
+            return ParseRestOfVname(ident);
         }
 
         Vname ParseRestOfVname(Identifier ident)

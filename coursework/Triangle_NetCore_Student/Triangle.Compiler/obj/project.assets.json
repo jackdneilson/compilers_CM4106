@@ -209,6 +209,12 @@
         "dependencies": {
           "Microsoft.NETCore.App": "2.0.0",
           "NuGet.Build.Packaging": "0.1.276"
+        },
+        "compile": {
+          "bin/placeholder/netcoreapp2.0/Triangle.AbstractMachine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/netcoreapp2.0/Triangle.AbstractMachine.dll": {}
         }
       }
     }
@@ -719,19 +725,22 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\Triangle.Compiler.csproj",
+      "projectUniqueName": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\Triangle.Compiler.csproj",
       "projectName": "Triangle.Compiler",
-      "projectPath": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\Triangle.Compiler.csproj",
-      "outputPath": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\obj\\",
+      "projectPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\Triangle.Compiler.csproj",
+      "outputPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
+      "files": {
+        "lib/netcoreapp2.0/Triangle.Compiler.dll": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\bin\\placeholder\\netcoreapp2.0\\Triangle.Compiler.dll"
+      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj": {
-              "projectPath": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj"
+            "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj": {
+              "projectPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj"
             }
           }
         }
@@ -742,8 +751,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
+            "version": "2.0"
           }
         }
       }

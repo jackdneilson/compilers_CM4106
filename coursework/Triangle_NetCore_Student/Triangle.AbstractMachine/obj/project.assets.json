@@ -707,14 +707,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj",
+      "projectUniqueName": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj",
       "projectName": "Triangle.AbstractMachine",
-      "projectPath": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj",
-      "outputPath": "\\\\nas-csdm.rgu.ac.uk\\csdm-H\\students\\15\\1506801\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\obj\\",
+      "projectPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj",
+      "outputPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
+      "files": {
+        "lib/netcoreapp2.0/Triangle.AbstractMachine.dll": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\bin\\placeholder\\netcoreapp2.0\\Triangle.AbstractMachine.dll"
+      },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {}
@@ -726,8 +729,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
+            "version": "2.0"
           },
           "NuGet.Build.Packaging": {
             "target": "Package",
