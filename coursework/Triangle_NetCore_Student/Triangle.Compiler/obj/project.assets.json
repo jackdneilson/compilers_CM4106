@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Microsoft.NETCore.App/2.0.0": {
@@ -194,7 +194,7 @@
           "lib/netstandard1.0/_._": {}
         },
         "build": {
-          "build/NETStandard.Library.targets": {}
+          "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
       "NuGet.Build.Packaging/0.1.276": {
@@ -207,14 +207,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Microsoft.NETCore.App": "2.0.0",
           "NuGet.Build.Packaging": "0.1.276"
         },
         "compile": {
-          "bin/placeholder/netcoreapp2.0/Triangle.AbstractMachine.dll": {}
+          "bin/placeholder/Triangle.AbstractMachine.dll": {}
         },
         "runtime": {
-          "bin/placeholder/netcoreapp2.0/Triangle.AbstractMachine.dll": {}
+          "bin/placeholder/Triangle.AbstractMachine.dll": {}
         }
       }
     }
@@ -720,30 +719,43 @@
     ]
   },
   "packageFolders": {
-    "C:\\Temp\\Nuget_Packages": {}
+    "/home/jack/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\Triangle.Compiler.csproj",
+      "projectUniqueName": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.Compiler/Triangle.Compiler.csproj",
       "projectName": "Triangle.Compiler",
-      "projectPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\Triangle.Compiler.csproj",
-      "outputPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\obj\\",
+      "projectPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.Compiler/Triangle.Compiler.csproj",
+      "packagesPath": "/home/jack/.nuget/packages/",
+      "outputPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.Compiler/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/home/jack/.nuget/NuGet/NuGet.Config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
-      "files": {
-        "lib/netcoreapp2.0/Triangle.Compiler.dll": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.Compiler\\bin\\placeholder\\netcoreapp2.0\\Triangle.Compiler.dll"
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj": {
-              "projectPath": "H:\\Documents\\compilers_CM4106\\coursework\\Triangle_NetCore_Student\\Triangle.AbstractMachine\\Triangle.AbstractMachine.csproj"
+            "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj": {
+              "projectPath": "/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine/Triangle.AbstractMachine.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -751,9 +763,15 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0"
+            "version": "2.0.0",
+            "autoReferenced": true
           }
-        }
+        },
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
       }
     }
   }

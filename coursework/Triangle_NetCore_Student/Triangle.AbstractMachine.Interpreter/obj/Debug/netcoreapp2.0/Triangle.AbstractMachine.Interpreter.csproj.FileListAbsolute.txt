@@ -40,3 +40,15 @@
 /home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.AssemblyInfo.cs
 /home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.dll
 /home/jack/Documents/compilers_CM4106/lib/Triangle.NetCore.Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.pdb
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.deps.json
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.runtimeconfig.json
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.runtimeconfig.dev.json
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.dll
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.pdb
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.dll
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/bin/Debug/netcoreapp2.0/Triangle.AbstractMachine.pdb
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.csproj.CoreCompileInputs.cache
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.AssemblyInfoInputs.cache
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.AssemblyInfo.cs
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.dll
+/home/jack/Documents/compilers_CM4106/coursework/Triangle_NetCore_Student/Triangle.AbstractMachine.Interpreter/obj/Debug/netcoreapp2.0/Triangle.AbstractMachine.Interpreter.pdb
