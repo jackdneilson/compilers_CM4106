@@ -26,7 +26,6 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         {
             var startLocation = _currentToken.Start;
 
-            ///TODO: Ask about type of denoter.
             switch (_currentToken.Kind)
             {
                 case TokenKind.Identifier:

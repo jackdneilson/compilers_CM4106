@@ -41,14 +41,11 @@ namespace Triangle.Compiler.ContextualAnalyzer
 			return null;
 		}
 
-	    //Completed according to lab 8, isn't in file provided.
         public Void VisitUnaryOperatorDeclaration(UnaryOperatorDeclaration ast, Void arg)
         {
             return null;
         }
 
-
-	    //Completed according to lab 8, isn't in file provided.
 		public Void VisitBinaryOperatorDeclaration(BinaryOperatorDeclaration ast, Void arg)
 		{
 			return null;

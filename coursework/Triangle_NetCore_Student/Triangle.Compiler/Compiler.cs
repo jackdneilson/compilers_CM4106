@@ -1,5 +1,7 @@
+using System.Runtime.CompilerServices;
 using Triangle.Compiler.ContextualAnalyzer;
 using Triangle.Compiler.SyntacticAnalyzer;
+using Triangle.Compiler.CodeGenerator;
 
 namespace Triangle.Compiler
 {
@@ -38,6 +40,11 @@ namespace Triangle.Compiler
         /// </summary>
         Checker _checker;
 
+        /// <summary>
+        /// The encoder.
+        /// </summary>
+        Encoder _encoder;
+
 
         /// <summary>
         /// Creates a compiler for the given source file.
@@ -52,7 +59,7 @@ namespace Triangle.Compiler
             _scanner = new Scanner(_source); //.EnableDebugging();
             _parser = new Parser(_scanner, ErrorReporter);
             _checker = new Checker(ErrorReporter);
-            //_encoder = new Encoder(ErrorReporter);
+            _encoder = new Encoder(ErrorReporter);
         }
 
         /// <summary>
@@ -95,7 +102,17 @@ namespace Triangle.Compiler
                 ErrorReporter.ReportMessage("Compilation was unsuccessful.");
                 return false;
             }
-
+            
+            //3rd pass
+            ErrorReporter.ReportMessage("Code Generation ...");
+            _encoder.EncodeRun(program);
+            if (ErrorReporter.HasErrors)
+            {
+                ErrorReporter.ReportMessage("Compilation was unsuccessful");
+                return false;
+            }
+            //_encoder.SaveObjectProgram(ObjectFileName);
+            
             ErrorReporter.ReportMessage("Compilation was successful.");
             return true;
         }
