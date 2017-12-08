@@ -24,11 +24,7 @@ namespace Triangle.Compiler.CodeGenerator.Entities
         {
             if (vname.IsIndexed)
             {
-                
-            }
-            else
-            {
-               
+                emitter.Emit(OpCode.LOAD, size, frame.DisplayRegister(_address), _address.Displacement);
             }
         }
     }

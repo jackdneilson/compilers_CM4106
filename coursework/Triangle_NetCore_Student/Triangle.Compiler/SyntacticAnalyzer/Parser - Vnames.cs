@@ -30,7 +30,8 @@ namespace Triangle.Compiler.SyntacticAnalyzer
         Vname ParseRestOfVname(Identifier ident)
         {
             var pos = new SourcePosition(ident.Start, ident.Finish);
-            return new SimpleVname(ident, pos);
+            Vname vname = new SimpleVname(ident, pos);
+            return vname;
         }
     }
 }

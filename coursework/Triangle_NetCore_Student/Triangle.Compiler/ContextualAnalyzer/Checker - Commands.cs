@@ -13,6 +13,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
         {
             var vnameType = ast.Vname.Visit(this);
             var expressionType = ast.Expression.Visit(this);
+            
+            System.Console.WriteLine(vnameType +":"+expressionType);
             CheckAndReportError(ast.Vname.IsVariable, "LHS of assignment is not a variable",
                 ast.Vname);
             CheckAndReportError(expressionType.Equals(vnameType), "assignment incompatibilty", ast);
