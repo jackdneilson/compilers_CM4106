@@ -74,6 +74,16 @@ namespace Triangle.Compiler.SyntacticAnalyzer
                         return new VarDeclaration(ident, type, pos);
                     }
 
+                case TokenKind.Type:
+                    {
+                        AcceptIt();
+                        var identifier = ParseIdentifier();
+                        Accept(TokenKind.Is);
+                        var typeDenoter = ParseTypeDenoter();
+                        var pos = new SourcePosition(startLocation, _currentToken.Finish);
+                        return new TypeDeclaration(identifier, typeDenoter, pos);
+                    }
+
                 default:
                     {
                         RaiseSyntacticError("\"%\" cannot start a declaration", _currentToken);
