@@ -18,7 +18,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
 		public Void VisitVarDeclaration(VarDeclaration ast, Void arg)
 		{
-			ast.Type.Visit(this);
+			ast.Type = ast.Type.Visit(this);
 			_idTable.Enter(ast.Identifier, ast);
 			CheckAndReportError(!ast.Duplicated, "identifier \"%\" already declared",
 				ast.Identifier, ast);

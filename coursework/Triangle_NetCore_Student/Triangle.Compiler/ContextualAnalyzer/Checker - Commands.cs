@@ -12,12 +12,10 @@ namespace Triangle.Compiler.ContextualAnalyzer
         public Void VisitAssignCommand(AssignCommand ast, Void arg)
         {
             var vnameType = ast.Vname.Visit(this);
-            var expressionType = ast.Expression.Visit(this);
-            
-            System.Console.WriteLine(vnameType +":"+expressionType);
+            var expressionType = ast.Expression.Visit(this);            
             CheckAndReportError(ast.Vname.IsVariable, "LHS of assignment is not a variable",
                 ast.Vname);
-            CheckAndReportError(expressionType.Equals(expressionType), "assignment incompatibilty", ast);
+            CheckAndReportError(expressionType.Equals(vnameType), "assignment incompatibilty", ast);
             return null;
         }
 
