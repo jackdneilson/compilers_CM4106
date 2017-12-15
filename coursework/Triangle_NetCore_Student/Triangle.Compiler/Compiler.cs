@@ -18,7 +18,7 @@ namespace Triangle.Compiler
         /// <summary>
         /// The error reporter.
         /// </summary>
-        static ErrorReporter ErrorReporter => new StreamErrorReporter();
+        static ErrorReporter ErrorReporter = new StreamErrorReporter();
 
         /// <summary>
         /// The source file to compile.
