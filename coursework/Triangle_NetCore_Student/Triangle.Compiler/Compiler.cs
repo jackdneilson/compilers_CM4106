@@ -111,7 +111,7 @@ namespace Triangle.Compiler
                 ErrorReporter.ReportMessage("Compilation was unsuccessful");
                 return false;
             }
-            //_encoder.SaveObjectProgram(ObjectFileName);
+            _encoder.SaveObjectProgram(ObjectFileName);
             
             ErrorReporter.ReportMessage("Compilation was successful.");
             return true;

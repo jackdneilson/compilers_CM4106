@@ -33,8 +33,12 @@ namespace Triangle.Compiler.ContextualAnalyzer
 
         public Declaration VisitOperator(Operator op, Void arg)
         {
-            
-            return null;
+            var binding = _idTable.Retrieve(op.Spelling);
+            if (binding != null)
+            {
+                op.Declaration = binding;
+            }
+            return binding;
         }
 
     }
