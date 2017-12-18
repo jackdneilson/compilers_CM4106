@@ -8,6 +8,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 			IFormalParameterSequenceVisitor
     {
         
+	    //Visitor function for a function declaration
         public Void VisitFuncDeclaration(FuncDeclaration ast, Void arg)
         {
             ast.Type = ast.Type.Visit(this);
@@ -24,6 +25,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+	    //Visitor function for a procedure declaration
         public Void VisitProcDeclaration(ProcDeclaration ast, Void arg)
         {
             // permits recursion
@@ -37,6 +39,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+	    //Visitor function for a formal constant parameter declaration
 		public Void VisitConstFormalParameter(ConstFormalParameter ast, Void arg)
 		{
 			ast.Type = ast.Type.Visit(this);
@@ -46,6 +49,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 			return null;
 		}
 
+	    //Visitor function for a formal function parameter declaration
 		public Void VisitFuncFormalParameter(FuncFormalParameter ast, Void arg)
 		{
 			_idTable.OpenScope();
@@ -57,7 +61,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
 				ast.Identifier, ast);
 			return null;
 		}
-
+		
+	    //Visitor function for a formal procedure parameter declaration
 		public Void VisitProcFormalParameter(ProcFormalParameter ast, Void arg)
 		{
 			_idTable.OpenScope();
@@ -69,6 +74,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 			return null;
 		}
 
+	    //Visitor function for a formal variable parameter declaration
 		public Void VisitVarFormalParameter(VarFormalParameter ast, Void arg)
 		{
 			ast.Type = ast.Type.Visit(this);
@@ -78,11 +84,13 @@ namespace Triangle.Compiler.ContextualAnalyzer
 			return null;
 		}
 
+	    //Visitor function for an empty formal parameter sequence
 		public Void VisitEmptyFormalParameterSequence(EmptyFormalParameterSequence ast, Void arg)
 		{
 			return null;
 		}
 
+	    //Visitor function for a a formal parameter sequence containing multiple formal parameters
 		public Void VisitMultipleFormalParameterSequence(MultipleFormalParameterSequence ast, Void arg)
 		{
 			ast.Formal.Visit(this);

@@ -17,6 +17,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
             EstablishStdEnvironment();
         }
 
+        //Traverses the given ast to check for semantic errors
         public void Check(Program ast)
         {
             ast.Visit(this, null);

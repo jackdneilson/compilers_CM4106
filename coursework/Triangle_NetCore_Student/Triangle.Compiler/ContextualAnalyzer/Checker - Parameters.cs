@@ -12,7 +12,9 @@ namespace Triangle.Compiler.ContextualAnalyzer
         // Actual Parameters
 
         // Always returns null. Uses the given FormalParameter.
-
+        
+        //Visitor for a constant actual parameter. Gets the type by visiting the expression, then performs type 
+        // and error checking
         public Void VisitConstActualParameter(ConstActualParameter ast, FormalParameter arg)
         {
             var expressionType = ast.Expression.Visit(this);
@@ -30,7 +32,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
         }
 
        
-
+        //Visitor for a variable actual parameter. Gets the type of the variable from the symbol tree by visiting the
+        //vname, then performs error and type checking
         public Void VisitVarActualParameter(VarActualParameter ast, FormalParameter arg)
         {
             var actualType = ast.Vname.Visit(this);
@@ -51,6 +54,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor for an empty actual parameter sequence
         public Void VisitEmptyActualParameterSequence(EmptyActualParameterSequence ast,
                 FormalParameterSequence arg)
         {
@@ -59,6 +63,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor for a multiple actual parameter sequence. Checks if it matches a multiple formal parameter sequence,
+        //then visits all of the actuals in turn
         public Void VisitMultipleActualParameterSequence(MultipleActualParameterSequence ast,
                 FormalParameterSequence arg)
         {
@@ -75,6 +81,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor for an actual parameter sequence containing a single actual parameter. Checks if parameter is also a 
+        //formal parameter then visits.
         public Void VisitSingleActualParameterSequence(SingleActualParameterSequence ast,
                 FormalParameterSequence arg)
         {

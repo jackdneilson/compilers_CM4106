@@ -8,7 +8,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
     {
 
         // Commands
-
+        //Visitor method for an assign command, adds the declared variable to the symbol table then checks itself and
+        //its children for errors
         public Void VisitAssignCommand(AssignCommand ast, Void arg)
         {
             var vnameType = ast.Vname.Visit(this);
@@ -19,6 +20,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor method for a call command, retrieves the procedure to be called and checks the parameters given for 
+        //errors. Also checks the procedure spelling exists in the symbol table
         public Void VisitCallCommand(CallCommand ast, Void arg)
         {
             var binding = ast.Identifier.Visit(this);
@@ -34,11 +37,13 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor for an empty command
         public Void VisitEmptyCommand(EmptyCommand ast, Void arg)
         {
             return null;
         }
 
+        //Visitor method for an if command, checks the type of the expression then visits the true and false commands
         public Void VisitIfCommand(IfCommand ast, Void arg)
         {
             var expressionType = ast.Expression.Visit(this);
@@ -49,6 +54,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor method for a let command, opens a new scope then adds any declarations to the symbol table, then 
+        //visits the command
         public Void VisitLetCommand(LetCommand ast, Void arg)
         {
             _idTable.OpenScope();
@@ -58,6 +65,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor method for sequential commands, visits the first command then visits the second command (the second
+        //command may be another sequential command to allow for chains of sequential commands)
         public Void VisitSequentialCommand(SequentialCommand ast, Void arg)
         {
             ast.FirstCommand.Visit(this);
@@ -65,6 +74,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return null;
         }
 
+        //Visitor method for while commands, checks the type of the expression given then visits the command
         public Void VisitWhileCommand(WhileCommand ast, Void arg)
         {
             var expressionType = ast.Expression.Visit(this);
@@ -73,6 +83,5 @@ namespace Triangle.Compiler.ContextualAnalyzer
             ast.Command.Visit(this);
             return null;
         }
-
     }
 }

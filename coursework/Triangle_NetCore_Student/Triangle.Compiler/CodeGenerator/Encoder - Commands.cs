@@ -67,6 +67,5 @@ namespace Triangle.Compiler.CodeGenerator
             _emitter.Emit(OpCode.JUMPIF, Machine.TrueValue, Register.CB, loopAddr);
             return null;
         }
-
     }
 }

@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage[margin=30mm]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{{$\hookrightarrow$}\space},
+}
+\begin{document}
+\title{1506801 Submission 2}
+\author{Jack Neilson}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\obeylines
+
+\section{Statement of Compliance}
+\subsection{Implemented}
+\begin{itemize}
+\item Semantic Analyser - The submission includes a fully working semantic analyser which takes an annotated abstract syntax tree and populates a symbol table, as well as checking for semantic errors.
+\item Code Generator - The submission includes a fully working code generator which takes an annotated syntax tree and generates appropriate instructions for the target abstract machine.
+\end{itemize}
+
+\subsection{Not Implemented}
+All parts of the coursework specification have been implemented.
+
+\section{Semantic Analysis}
+The sematic anaylser is implemented as a set of multiple partial classes, each of which is specific to a part of the language definition. These partial classes have been designed using the visitor pattern as a way of implementing double dispatch. When the check() method is called on the instantiated semantic analyser it will traverse the passed abstract syntax tree and populate the symbol table while checking for semantic errors. Note that the annotated abstract syntax tree will not be modified when using this pattern. Since the visitor pattern is used throughout it is simple to implement methods appropriate for different node types on the tree. For example, when the first call to check() is made the semantic analyser calls VisitProgram(), which in turn calls Program.Command.Visit(). The appropriate visit command method is then called depending on which interface the Command object has implemented, identified by their signatures (VisitAssignCommand takes an AssignCommand, VisitCallCommand takes a CallCommand and so on). This continues for every node on the tree until the entire tree has been traversed and checked for errors.
+
+\subsection{Symbol Table}
+The symbol table has been implemented in the IdentificationTable.cs file. The symbol table itself has been represented by a list of dictionaries, with the current scope always being at the head of the list. It allows for the entry and retrieval of new terminals and their attributes, as well as the opening and closing of scopes. When a new scope is opened, it is added at the head of the list so that when scope is closed, all that is needed is a call to list.removeAt(0). The symbol table should only contain entries from the current and previous scopes, and should be empty when semantic analysis is complete.
+
+\subsection{Variable Declaration and Use}
+The symbol table is used whenever a variable is declared or used.
+
+\subsubsection{Declaration}
+When a new variable is declared the symbol table is checked to see if a variable of the same spelling is already declared. If there is, the Duplicated property of the variable declaration is set to true. The new declaration is then added to the table at the current scope (i.e. list[0]), with the key being the spelling of the variable.
+
+\subsubsection{Usage}
+When a variable is used it must first be retrieved from the symbol table. The current scope and all previous scopes are iterated over until a match is found and returned, or if no match found then null is returned.
+
+\subsection{Type Checking}
+Type checking is done as the semantic analyser traverses the tree. When the type of a terminal can be inferred (for example, in the case of an integer literal) the symbol table is not needed. However, when a variable is used the symbol table must be checked to find the type of the variable in order to perform type checking.
+
+\subsection{Variable Scope}
+As described previously, variable scope is checked by using a list of dictionaries. Each dictionary represents a scope level, with the current scope being at the head of the list, the secondmost current scope being at $head + 1$ and so on. If a variable is in scope, it will be an entry in one of the dictionaries. Since the list is iterated over from head to tail, only the most recent matching entry is returned which is the desired behaviour. When a scope is closed, the head of the list is removed, leaving $head + 1$ (the secondmost recent scope) as the new current scope at the head of the list. If variable is referred to after its scope has been closed it will not be found in the symbol table, as the dictionary containing its related entry will have been removed from the list.
+
+\section{Code Generation}
+Once again, the visitor pattern is used during code generation. An annotated syntax tree which has been checked for correctness is passed to the emitter, which will generate code for the target abstract machine using predefined templates which have been elaborated on below. A list of the templates can be found in the appendix.
+
+\subsection{Commands}
+\subsubsection{Assign}
+When an assign command is visited, the expression is visited to find how much memory is needed to store it. While visiting the expression, the emitter should also output the instruction to load the literal value of the expression on to the top of the stack. Encoder.EncodeAssign() is then called with the vname object, a new frame which is larger than the old current frame by the size of the expression, and the size of the expression. This in turn calls KnownAddress.EncodeAssign() with the emitter, current frame, size of the variable and variable name, which finally uses the emitter to output a store instruction to pop the value of the expression off of the top of the stack and store it at the given address in the current register.
+
+\subsubsection{Call}
+When a call command is visited, it's actual parameters are visited and their sizes summed. The function or procedure is then visited, passing a new frame that is the size of the actual parameters.
+
+\subsubsection{If}
+The if command is slightly more complex as it requires memory addresses to be back patched. First, the expression to be evaluated is visited. The emitter then outputs a new JUMPIF false instruction, with the address to jump to set as the code stack base. The address of this instruction is stored for later use. The command to be executed if the expression evaluates to true is then visited. The emitter outputs a JUMP instruction, with the address set again to the code stack base. The JUMPIF instruction is now backpatched with the current memory address, so that if the expression evaluates to false the machine jumps past the command executed if the expression is true. The false command is then visited, and finally the JUMP instruction is backpatched with the current memory address so that the machine jumps past the command to be executed if the expression is evaluated as false once it has completed the command to be executed if the expression is true.
+
+\subsubsection{Let}
+When a let command is visited, any declarations it contains are visited and their sizes summed. The command is then visited, passing a new frame which is larger than the current frame by the summed size of the declarations. Once this command has been completed, the emitter outputs a POP instruction to remove all declarations from the stack.
+
+\subsubsection{While}
+When visiting a while command we must again use backpatching. A JUMP instructions is outputted, with the address to jump to being set to the code stack base. The address of the JUMP statement is stored for later use. The address of the next instruction is also stored, to allow for a jump to the command that is to be looped. The command is then visited, and the current memory address is backpatched to the JUMP statement so that the command is not executed before the expression is evaluated. The expression is then visited, and the emitter outputs a JUMPIF true instruction to jump to the loop address that was stored previously.
+
+\subsection{Declarations}
+\subsubsection{Constant}
+When a constant declaration is visited, the AST is decorated with a new runtime entity that corresponds to the expression child of the ConstDeclaration node. If the expression is not a literal, then it is visited and the size of the expression is included in the decorator. Finally, the extra stack size needed to store the constant is returned.
+
+\subsubsection{Variable}
+When a variable declaration is visited, the size needed to store the variable is stored by checking the type of the variable. The emitter the outputs a PUSH instruction to allocate space of this size to the stack, then the declaration is decorated with a new runtime entity of known address. Finally, the size needed to store the variable is returned.
+
+\subsection{Expressions}
+\subsection{Parameters}
+\subsection{Terminals}
+\subsection{Type Denoters}
+\subsection{Variable Names}
+
+\subsection{Emitter}
+\subsection{Memory Management}
+
+
+
+
+
+\section{General Implementation}
+\section{Testing}
+\section{Appendix}
+\subsection*{Code Generation Template}
+
+\end{document}

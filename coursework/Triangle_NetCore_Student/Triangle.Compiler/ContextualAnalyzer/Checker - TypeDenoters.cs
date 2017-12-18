@@ -11,12 +11,11 @@ namespace Triangle.Compiler.ContextualAnalyzer
         // Returns the expanded version of the TypeDenoter. Does not
         // use the given object.
 
+        //Visitors for all primitive type denoters
         public TypeDenoter VisitAnyTypeDenoter(AnyTypeDenoter ast, Void arg)
         {
             return StandardEnvironment.AnyType;
         }
-
-
 
         public TypeDenoter VisitBoolTypeDenoter(BoolTypeDenoter ast, Void arg)
         {
@@ -33,6 +32,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return StandardEnvironment.ErrorType;
         }
 
+        //Visitor for a variable type denoter, retrieves variable type from symbol table
         public TypeDenoter VisitSimpleTypeDenoter(SimpleTypeDenoter ast, Void arg)
         {
 

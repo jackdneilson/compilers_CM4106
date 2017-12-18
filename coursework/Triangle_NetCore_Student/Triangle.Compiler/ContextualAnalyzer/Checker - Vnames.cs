@@ -8,7 +8,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
 {
     public partial class Checker : IVnameVisitor<Void, TypeDenoter>
     {
-        
+        //Visitor for a variable name, retrieves the type of the variable from the symbol table
         public TypeDenoter VisitSimpleVname(SimpleVname ast, Void arg)
         {
             var binding = ast.Identifier.Visit(this);

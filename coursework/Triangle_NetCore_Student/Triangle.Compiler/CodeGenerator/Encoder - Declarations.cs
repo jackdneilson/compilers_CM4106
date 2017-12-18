@@ -59,6 +59,5 @@ namespace Triangle.Compiler.CodeGenerator
             Encoder.WriteTableDetails(ast);
             return extraSize;
         }
-
     }
 }

@@ -13,7 +13,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
         // Returns the TypeDenoter denoting the type of the expression. Does
         // not use the given object.
 
-
+        //Visitor method for a binary expression. Visits both sides of the expression, then the operator.
+        //Reverse Polish notation is used in expression resolution. Also checks types for errors
         public TypeDenoter VisitBinaryExpression(BinaryExpression ast, Void arg)
         {
             var e1Type = ast.LeftExpression.Visit(this);
@@ -43,6 +44,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return ast.Type = StandardEnvironment.ErrorType;
         }
 
+        //Visitor method for a call expression. Visits the identifier (retrieving from the symbol table), then all of 
+        //the formal parameters.
         public TypeDenoter VisitCallExpression(CallExpression ast, Void arg)
         {
             var binding = ast.Identifier.Visit(this);
@@ -57,16 +60,20 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return ast.Type = StandardEnvironment.ErrorType;
         }
 
+        //Visitor method for a character expression. Simply returns the type of the expression (char).
         public TypeDenoter VisitCharacterExpression(CharacterExpression ast, Void arg)
         {
             return ast.Type = StandardEnvironment.CharType;
         }
 
+        //Visitor method for an empty expression
         public TypeDenoter VisitEmptyExpression(EmptyExpression ast, Void arg)
         {
             return ast.Type = null;
         }
 
+        //Visitor method for an if expression. Visits the evaluated expression as well as both true and false
+        //expressions and performs type checking.
         public TypeDenoter VisitIfExpression(IfExpression ast, Void arg)
         {
             var e1Type = ast.TestExpression.Visit(this);
@@ -78,11 +85,14 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return ast.Type = e2Type;
         }
 
+        //Visitor method for an integer expression. Simple returns the type (integer).
         public TypeDenoter VisitIntegerExpression(IntegerExpression ast, Void arg)
         {
             return ast.Type = StandardEnvironment.IntegerType;
         }
 
+        //Visitor method for a let expression. Opens a new scope, then visits the declaration and expression.
+        //Finally, closes the opened scope and returns the type of the expression.
         public TypeDenoter VisitLetExpression(LetExpression ast, Void arg)
         {
             _idTable.OpenScope();
@@ -93,6 +103,7 @@ namespace Triangle.Compiler.ContextualAnalyzer
         }
 
 
+        //Visitor method for a unary expression. Performs type checking on the given expression and operator
         public TypeDenoter VisitUnaryExpression(UnaryExpression ast, Void arg)
         {
             var expressionType = ast.Expression.Visit(this);
@@ -109,6 +120,8 @@ namespace Triangle.Compiler.ContextualAnalyzer
             return ast.Type = StandardEnvironment.ErrorType;
         }
 
+        //Visitor method for a variable name expression. Visits the variablle name, retrieving it's type from the 
+        //symbol table then returns its type.
         public TypeDenoter VisitVnameExpression(VnameExpression ast, Void arg)
         {
             var vnameType = ast.Vname.Visit(this);
