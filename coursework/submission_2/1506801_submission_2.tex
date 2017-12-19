@@ -50,7 +50,7 @@ Type checking is done as the semantic analyser traverses the tree. When the type
 As described previously, variable scope is checked by using a list of dictionaries. Each dictionary represents a scope level, with the current scope being at the head of the list, the secondmost current scope being at $head + 1$ and so on. If a variable is in scope, it will be an entry in one of the dictionaries. Since the list is iterated over from head to tail, only the most recent matching entry is returned which is the desired behaviour. When a scope is closed, the head of the list is removed, leaving $head + 1$ (the secondmost recent scope) as the new current scope at the head of the list. If variable is referred to after its scope has been closed it will not be found in the symbol table, as the dictionary containing its related entry will have been removed from the list.
 
 \section{Code Generation}
-Once again, the visitor pattern is used during code generation. An annotated syntax tree which has been checked for correctness is passed to the emitter, which will generate code for the target abstract machine using predefined templates which have been elaborated on below. A list of the templates can be found in the appendix.
+Once again, the visitor pattern is used during code generation. An annotated syntax tree which has been checked for correctness is passed to the emitter, which will generate code for the target abstract machine using predefined templates which have been elaborated on below.
 
 \subsection{Commands}
 \subsubsection{Assign}
@@ -76,21 +76,93 @@ When a constant declaration is visited, the AST is decorated with a new runtime 
 When a variable declaration is visited, the size needed to store the variable is stored by checking the type of the variable. The emitter the outputs a PUSH instruction to allocate space of this size to the stack, then the declaration is decorated with a new runtime entity of known address. Finally, the size needed to store the variable is returned.
 
 \subsection{Expressions}
-\subsection{Parameters}
-\subsection{Terminals}
-\subsection{Type Denoters}
-\subsection{Variable Names}
+\subsubsection{Literal}
+For both integer and character literals, the emitter will simply output a LOADL command with the value of the literal.
 
-\subsection{Emitter}
-\subsection{Memory Management}
+\subsubsection{Binary}
+When a binary expression is encountered the amount of memory needed to store the type of the expression is first stored. Then, both sides of the expression are visited and the current frame expanded to accommodate. After the right hand side expression is visited, the frame is replaced with a new frame of size $exp1 + exp2$. The operator is then visited, and finally the size of the binary expression is returned.
 
+\subsubsection{Call}
+When a call expression is encountered the amount of memory needed to store the type of the call is first stored. Then, the amount of memory needed to store the arguments passed with the call is stored. The identifier for the call is then visited, passing a new frame that is the size of the arguments. Finally, the amount of memory needed to store the type of the call is returned.
 
+\subsubsection{If}
+When visiting an if expression, backpatching must be used. The type and test expression are first visited, then the emitter outputs a JUMPIF false instruction the location of which is stored. The amount of memory needed to store the expression to be evaluated if the test test expression is true is found by visiting the expression. A JUMP instruction is outputted, and then the JUMPIF is patched with the current address so that the expression to be evaluated if the test expression is true is not evaluated when the test expression is false. The false expression is then visited, and finally the JUMP command is backpatched with the current memory address.
 
+\subsubsection{Let}
+When visiting a let expression, declarations are visited and the frame expanded to fit the new declarations. Once the expression has been evaluated, the emitter outputs a POP instruction to remove any declarations from the stack.
 
+\subsection{Entities}
+\subsubsection{Known Value}
+When the value of an entity is known at compile time (e.g. in the case of an integer literal) it can simply be pushed to the top of the stack with the instruction LOADL.
 
-\section{General Implementation}
+\subsubsection{Unknown Value}
+When the value of an entity is not known at compile time but the address is, it must be loaded with a LOAD command. This takes the size of the entity to be loaded, the register (SB, L1 etc.) the entity is stored in, and the displacement relative to the base of that register.
+
+\subsubsection{Known Address}
+This class allows us to store and retrieve variable values from memory. The first method, EncodeAssign will store whatever value is at the top of the stack at the location in memory referenced by the vname object passed to it. The second, EncodeFetch, will retrieve the value from the address referenced by the vname object and push it to the top of the stack. The final method, EncodeFetchAddress, will push the address referenced by the vname object to the top of the stack.
+
+\subsubsection{Unknown Address}
+Unknown addresses are primarily found when an argument to a function or procedure is bound to a variable. The value of the variable cannot be referenced directly since it's address is unknown, however the address of the variable itself is known. When using the value of the variable, we must first push the variable object itself to the top of the stack, then use the STOREI or LOADI commands to pop that object from the top of the stack, and push the object that it references to the stack.
+
 \section{Testing}
-\section{Appendix}
-\subsection*{Code Generation Template}
+\subsection{sub.tri}
+This program should compile successfully and when ran in the abstract machine interpreter should ask the user for a number between 0 and 100, then decrement by 5 until the number is less than 0 than exit. The compiler compiled this program successfully.
 
+\begin{lstlisting}
+let
+  const MAX ~ 100;
+  var y: Integer;
+  var x: Integer
+in
+begin
+  y := 5;
+  put('?');
+  getint(var x);
+  if (x>0) /\ (x<=MAX) then
+    while x > 0 do 
+    begin
+      x := x-y;
+      putint(x);
+      put(',')
+    end
+  else
+end
+\end{lstlisting}
+
+\subsection{gcd.tri}
+This program should fail upon syntax analysis, as the "func" token cannot start a declaration. The compiler rejected this program at syntax analysis
+
+\begin{lstlisting}
+let func gcd (x: Integer, y: Integer) : Integer ~
+  if x // y = 0 then y else god(y, x // y);
+in
+  putint(gcd(321, 81))
+\end{lstlisting}
+
+\subsection{nullreference.tri}
+This program should fail upon semantic analysis, the "put" method should take a character and the "putint" method should take an integer. In both cases, the incorrect type has been supplied. The compiler failed at the semantic analysis stage when supplied with this program.
+
+\begin{lstlisting}
+let
+	var y: Integer;
+	var x: Integer
+in
+begin
+	put(x);
+	putint('x')
+end
+\end{lstlisting}
+
+\subsection{1506801.tri}
+This program should repeat "John" infinitely. The compiler succeeded in compiling this program, and it was ran successfully by the Interpreter.
+
+\begin{lstlisting}
+while true do 
+    begin
+   	put('J');
+	put('o');
+	put('h');
+	put('n');
+    end
+\end{lstlisting}
 \end{document}

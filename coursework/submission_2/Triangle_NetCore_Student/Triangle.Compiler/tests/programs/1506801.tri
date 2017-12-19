@@ -1,0 +1,7 @@
+while true do 
+    begin
+   	put('J');
+	put('o');
+	put('h');
+	put('n');
+    end

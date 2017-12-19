@@ -1,0 +1,8 @@
+let
+	var y: Integer;
+	var x: Integer
+in
+begin
+	put(x);
+	putint('x')
+end

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Triangle.AbstractMachine\Triangle.AbstractMachine.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="tests\programs\gcd.tri" />
+    <None Remove="tests\programs\proc.tri" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SyntaxTrees\.DS_Store" />
+  </ItemGroup>
+</Project>
